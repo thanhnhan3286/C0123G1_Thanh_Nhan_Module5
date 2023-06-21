@@ -27,24 +27,24 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
             rel="stylesheet"
     />
+    <style>
+        .boxed {
+            width: 200px;
+            height: 700px;
+            position: relative;
+            background-clip: padding-box;
+            border: 10px solid transparent;
+            background-color: white;
+            border-radius: 20px;
+            border: 1px solid black;
+        }
 
+        .mg {
+            margin-top: 23px;
+        }
+    </style>
 </head>
-<style>
-    .boxed {
-        width: 200px;
-        height: 700px;
-        position: relative;
-        background-clip: padding-box;
-        border: 10px solid transparent;
-        background-color: white;
-        border-radius: 20px;
-        border: 1px solid black;
-    }
 
-    .mg {
-        margin-top: 23px;
-    }
-</style>
 <body>
 <div class="container boxed" style="margin-top: 100px; width: 800px">
     <h2 style="text-align: center; margin-top: 20px"> Thêm mới dịch vụ</h2>
@@ -161,7 +161,7 @@
               </span>
                 </div>
                 <input
-                        type="text"
+                        type="number" min="40" max="1000"
                         class="form-control"
                         aria-label="Small"
                         aria-describedby="inputGroup-sizing-sm"
@@ -186,7 +186,7 @@
                     class="btn btn-success"
                     style="margin-left: 45%"
             >
-                Save
+                Thêm mới
             </button>
         </form>
     </div>
