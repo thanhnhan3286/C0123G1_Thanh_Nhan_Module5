@@ -2580,7 +2580,7 @@ select.form-control-lg:not([size]):not([multiple]),
     border: 1px solid transparent;
     padding: 10px 12px;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 10px;
     border-radius: 2px;
     -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -4411,7 +4411,7 @@ button.close {
 
 .modal-dialog {
     position: relative;
-    width: auto;
+    width: 500px;
     margin: 10px;
     pointer-events: none;
 }
@@ -4473,8 +4473,10 @@ button.close {
 }
 
 .modal-title {
-    margin-bottom: 0;
+    margin-bottom: 10px;
     line-height: 1.5;
+    color: #2c2c2c;
+    text-align: center;
 }
 
 .modal-body {
@@ -4527,7 +4529,7 @@ button.close {
 
 @media (min-width: 1024px) {
     .modal-lg {
-        max-width: 800px;
+        max-width: 500px;
     }
 }
 
@@ -12532,16 +12534,16 @@ a.link-whatsapp:hover [class*='icon-'] {
 
 .room-card-info {
     background-color: #f7f7f7;
-    padding: 20px 20px;
+    padding: 10px 15px;
 }
 
 @media (max-width: 767px) {
     .room-card-info {
-        padding: 15px;
+        padding: 10px;
     }
     .room-card-info .row {
-        margin-left: -5px;
-        margin-right: -5px;
+        margin-left: -3px;
+        margin-right: -3px;
     }
     .room-card-info [class*='col-'] {
         padding: 0 5px;
@@ -12569,19 +12571,19 @@ a.link-whatsapp:hover [class*='icon-'] {
 
 @media (max-width: 1229px) {
     .room-card-info .room-type {
-        font-size: 18px;
+        font-size: 10px;
     }
 }
 
 @media (max-width: 1023px) {
     .room-card-info .room-type {
-        font-size: 18px;
+        font-size: 10px;
     }
 }
 
 @media (max-width: 767px) {
     .room-card-info .room-type {
-        font-size: 18px;
+        font-size: 10px;
     }
 }
 
@@ -13706,7 +13708,7 @@ a.link-whatsapp:hover [class*='icon-'] {
 }
 
 .modal-dialog {
-    max-width: 800px;
+    max-width: 500px;
     margin: 35px auto;
 }
 
