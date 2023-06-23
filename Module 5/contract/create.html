@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Create</title>
     <link rel="stylesheet" type="text/css"
-                                                                           href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css">
+          href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css">
 
     <!-- Font Awesome -->
     <link
@@ -53,75 +53,42 @@
     }
 </style>
 <body>
-<div class="container boxed" style="margin-top: 2%;width: 700px;height: auto ">
-    <h2 style="text-align: center;margin-top: 20px">Thêm mới khách hàng</h2>
+<div class="container boxed" style="margin-top: 2%;width: 800px;height: auto ">
+    <h2 style="text-align: center;margin-top: 20px">Tạo hợp đồng Khách hàng thuê dịch vụ ở Furama</h2>
     <div id="form" class="form" style="margin-left: 10%;margin-right: 10%">
         <form action="#"
               method="POST" novalidate="novalidate">
             <div class="input-group input-group-sm mg" style="margin-top: 30px">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Họ tên</span>
+                    <span class="input-group-text">Ngày bắt đầu</span>
                 </div>
-                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
+                <input type="date" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
             </div>
             <p style="color: red;"></p>
             <div class="input-group input-group-sm mg">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Ngày sinh</span>
+                    <span class="input-group-text">Ngày Kết thúc</span>
+                </div>
+                <input type="date" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
+            </div>
+            <p style="color: red"></p>
+            <div class="input-group input-group-sm mg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Số tiền cọc trước</span>
                 </div>
                 <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
             </div>
             <p style="color: red"></p>
             <div class="input-group input-group-sm mg">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Giới tính</span>
+                    <span class="input-group-text">Tổng số tiền thanh toán</span>
                 </div>
                 <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
             </div>
             <p style="color: red"></p>
-            <div class="input-group input-group-sm mg">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Số CMND</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
-            </div>
-            <p style="color: red"></p>
-            <div class="input-group input-group-sm mg">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Số điện thoại</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
-            </div>
-            <p style="color: red"></p>
-            <div class="input-group input-group-sm mg">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Email</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
-            </div>
-            <p style="color: red"></p>
-            <div class="input-group input-group-sm mg">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Loại khách</span>
-                </div>
-                <select class="form-select">
-                    <option>Diamond</option>
-                    <option>Platinium</option>
-                    <option>Gold</option>
-                    <option>Silver</option>
-                    <option>Member</option>
-                </select>
-            </div>
-            <div class="input-group input-group-sm mg">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Địa chỉ</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required/>
-            </div>
-            <p style="color: red" ></p>
             <br>
             <div class="mb-4 text-center">
-                <button type="submit" class="btn btn-success">Thêm mới</button>
+                <button type="submit" class="btn btn-success">Tạo hợp đồng</button>
             </div>
         </form>
     </div>

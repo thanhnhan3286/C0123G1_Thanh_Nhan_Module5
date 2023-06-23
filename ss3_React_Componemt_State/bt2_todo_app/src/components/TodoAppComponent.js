@@ -37,19 +37,22 @@ export class TodoAppComponent extends Component {
                                onChange={(even) => this.handleInputTodo(even.target.value)}/>
                         <button onClick={() => this.addTodo()}>ADD</button>
                         <table className="text-center m-auto mt-2">
+                            <thead>
                             <tr>
                                 <th>Todo
                                 </th>
                             </tr>
-                            {
-                                this.state.todoList.map((todo, index) => (
-                                    <tr key={index}>
-                                        <td>
-                                            {todo}
-                                        </td>
-                                    </tr>
-                                ))
+                            </thead>
+                            <tbody>
+                            {this.state.todoList.map((todo, index) => (
+                                <tr key={index}>
+                                    <td>
+                                        {todo}
+                                    </td>
+                                </tr>
+                            ))
                             }
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -57,5 +60,3 @@ export class TodoAppComponent extends Component {
         );
     }
 }
-
-export default TodoAppComponent

@@ -36,16 +36,16 @@ export class StudentInfoComponent extends Component {
                         <th>Address</th>
                     </tr>
                     </thead>
+                    <tbody>
                     {this.state.studentList.map((student, index) => (
-                        <tbody>
                         <tr key={index}>
                             <td>{student.id}</td>
                             <td>{student.name}</td>
                             <td>{student.age}</td>
                             <td>{student.address}</td>
                         </tr>
-                        </tbody>
                     ))}
+                    </tbody>
                 </table>
             </>
         )

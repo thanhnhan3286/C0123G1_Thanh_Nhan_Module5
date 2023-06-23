@@ -11429,6 +11429,22 @@ body.menu-open .modal-backdrop {
         display: none !important;
     }
 }
+.stuck {
+    position: fixed;
+    top: 0;
+    z-index: 900;
+}
+.sticky {
+    display: block;
+}
+.header-nav {
+    background-color: #046056;
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
+.header-nav .js-header-nav .sticky .stuck {
+    z-index: 999;
+}
 
 .navbar-btn {
     color: #454545;
