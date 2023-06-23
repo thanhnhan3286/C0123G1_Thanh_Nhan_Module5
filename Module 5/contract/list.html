@@ -68,6 +68,22 @@
             </div><!--//app-card-->
         </div>
     </div><!--//tab-content-->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center ">
+            <li class="page-item ">
+                <a class="page-link" href="@{'/orderController/'(page=${orderPage.number -1})}"
+                   if="${orderPage.hasPrevious()}">Previous</a>
+            </li>
+            <!--                        <li style="border: 1px solid #CCCCCC" class="page-item active" ><a class="page-link active" th:text="${pageNo}" th:href="@{/(page=${pageNo})}"></a></li>-->
+            <li class="page-item    "><a class="page-link"
+                                         text="${orderPage.number +1}">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="@{'/orderController/'(page=${orderPage.number +1})}"
+                   if="${orderPage.hasNext()}">Next</a>
+            </li>
+        </ul>
+    </nav>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
