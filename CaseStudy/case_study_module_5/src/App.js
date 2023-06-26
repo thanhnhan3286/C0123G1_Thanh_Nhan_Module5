@@ -9,7 +9,7 @@ import {EditFacility} from "./components/facility/EditFacility";
 function App() {
     return (
         <>
-            <EditFacility />
+            <CreateFacility />
         </>
     );
 }

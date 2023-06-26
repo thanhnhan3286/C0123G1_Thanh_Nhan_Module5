@@ -108,7 +108,7 @@ export default function FormComponent() {
                                                 className="form-control"
                                                 id="message"
                                                 name="message"
-                                                // as="textarea"
+                                                as="textarea"
                                                 aria-label="Small"
                                                 aria-describedby="inputGroup-sizing-sm"
                                             />
