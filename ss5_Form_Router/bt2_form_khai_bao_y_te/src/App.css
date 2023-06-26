@@ -70,6 +70,9 @@ input, textarea, button {
 .flex {
   display: flex;
 }
+.error-mess {
+  color: red;
+}
 
 @keyframes App-logo-spin {
   from {

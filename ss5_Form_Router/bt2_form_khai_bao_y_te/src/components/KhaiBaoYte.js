@@ -36,7 +36,8 @@ export function KhaiBaoYte() {
                             .required('Không được để trống'),
                             // .matches(/^[0-9]+$/, 'Chưa đúng định dạng email!!!'),
                         namSinh: Yup.number()
-                            .required('Không được để trống'),
+                            .required('Không được để trống')
+                            .min(1900,'Năm sinh phải sau năm 1900'),
                             // .matches(/^[1-2][0-9]{3}$/, 'Chưa đúng định dạng email!!!'),
                         quocTich: Yup.string()
                             .required('Không được để trống'),
@@ -191,14 +192,14 @@ export function KhaiBaoYte() {
                                 <h3>Trong vòng 14 ngày qua Anh/chị có xuất hiện triệu chứng nào sau đây không?</h3>
                                 <div className="mb-3 d-flex">
                                     <Field type="checkbox" className="form-check-input"
-                                           value="sốt"
+                                           value="Sốt"
                                            name="trieuChung"
                                     />
-                                    <label className="form-check">sốt</label>
+                                    <label className="form-check">Sốt</label>
                                 </div>
                                 <div className="mb-3 d-flex">
                                     <Field type="checkbox" className="form-check-input"
-                                           value="ho"
+                                           value="Ho"
                                            name="trieuChung"
                                     />
                                     <label className="form-check">Ho</label>
@@ -225,7 +226,7 @@ export function KhaiBaoYte() {
                                            value="Đau họng"
                                            name="trieuChung"
                                     />
-                                    <label className="form-check">Đau họng </label>
+                                    <label className="form-check">Đau họng</label>
 
                                 </div>
                                 <div className="mb-3 d-flex">
