@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 
 export function Library() {
     const [books, setBook] = useState([])
-
     const fetchApi = async () => {
         const result = await bookService.findAll()
         setBook(result);

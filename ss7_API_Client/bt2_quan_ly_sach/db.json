@@ -1,9 +1,9 @@
 {
   "book": [
     {
-      "title": "ƯADASD",
-      "quantity": "12",
-      "id": 3
+      "id": 3,
+      "title": "bánh bèo",
+      "quantity": "20"
     },
     {
       "title": "nhân",
@@ -14,6 +14,16 @@
       "title": "Truyện ngôn tình",
       "quantity": "15",
       "id": 5
+    },
+    {
+      "title": "truyện ngụ ngôn",
+      "quantity": "30",
+      "id": 6
+    },
+    {
+      "title": "Xóm trọ Kungfu",
+      "quantity": "1000",
+      "id": 7
     }
   ]
 }

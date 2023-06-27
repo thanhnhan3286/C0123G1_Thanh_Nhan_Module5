@@ -55,7 +55,6 @@ export function TodoAppCreate() {
                                     }
 
                                 </Form>
-
                             )
                         }
                     </Formik>
