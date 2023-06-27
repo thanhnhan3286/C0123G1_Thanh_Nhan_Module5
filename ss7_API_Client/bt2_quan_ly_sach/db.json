@@ -1,0 +1,19 @@
+{
+  "book": [
+    {
+      "title": "ƯADASD",
+      "quantity": "12",
+      "id": 3
+    },
+    {
+      "title": "nhân",
+      "quantity": "12",
+      "id": 4
+    },
+    {
+      "title": "Truyện ngôn tình",
+      "quantity": "15",
+      "id": 5
+    }
+  ]
+}

@@ -66,7 +66,6 @@ export default function FormComponent() {
 
                                         </div>
                                         <ErrorMessage name='name' component='span' className='form-err'/>
-                                        <p style={{color: "red"}}/>
                                         <div className="input-group input-group-sm mg">
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text">Email</span>
@@ -82,7 +81,6 @@ export default function FormComponent() {
 
                                         </div>
                                         <ErrorMessage name='email' component='span' className='form-err'/>
-                                        <p style={{color: "red"}}/>
                                         <div className="input-group input-group-sm mg">
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text">Phone</span>
@@ -98,7 +96,6 @@ export default function FormComponent() {
 
                                         </div>
                                         <ErrorMessage name='phone' component='span' className='form-err'/>
-                                        <p style={{color: "red"}}/>
                                         <div className="input-group input-group-sm mg">
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text">Message</span>
@@ -113,7 +110,6 @@ export default function FormComponent() {
                                                 aria-describedby="inputGroup-sizing-sm"
                                             />
                                         </div>
-                                        <p style={{color: "red"}}/>
                                         <br/>
                                             <div className="mb-4 text-center">
                                                 {

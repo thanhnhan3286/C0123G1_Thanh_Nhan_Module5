@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="88a267a2-f8d9-46c5-8b71-015749d0fb70" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/case_study_module_5/src/components/customer/EditCustomer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/case_study_module_5/src/components/customer/ListCustomer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/bt1_tao_form_lien_he.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/.idea/dictionaries/Admin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/.idea/ss7_API_Client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/src/components/TodoAppCreate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/src/service/TodoAppService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt1_todo_list/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/src/components/AddBook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/src/components/Library.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/src/components/UpdateBook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/src/service/BookService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss7_API_Client/bt2_quan_ly_sach/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/case_study_module_5/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/case_study_module_5/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/case_study_module_5/src/components/facility/CreateFacility.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/case_study_module_5/src/components/facility/CreateFacility.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3_React_Componemt_State/bt2_todo_app/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3_React_Componemt_State/bt2_todo_app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss3_React_Componemt_State/bt2_todo_app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FormComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FormComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bt2_form_khai_bao_y_te/src/components/KhaiBaoYte.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bt2_form_khai_bao_y_te/src/components/KhaiBaoYte.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2Rms0VKNvbWz0C9saAhVKStqrnV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88a267a2-f8d9-46c5-8b71-015749d0fb70" name="Default Changelist" comment="" />
+      <created>1687866367179</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687866367179</updated>
+      <workItem from="1687866368631" duration="173000" />
+      <workItem from="1687867771138" duration="1710000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="638" y="319" key="#ESLint" timestamp="1687866388611">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="638" y="319" key="#ESLint/0.0.1536.816@0.0.1536.816" timestamp="1687866388611" />
+  </component>
+</project>

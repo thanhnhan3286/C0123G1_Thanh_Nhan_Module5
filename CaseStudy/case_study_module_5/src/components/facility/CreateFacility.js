@@ -38,8 +38,6 @@ export function CreateFacility() {
                         .required('Required')
                         .min(2, 'Min: 2')
                         .max(30, 'Max: 30'),
-                    rentalType: Yup.string()
-                        .required('Required'),
                     roomStandard: Yup.string()
                         .required('Required'),
                     otherUtilities: Yup.string(),

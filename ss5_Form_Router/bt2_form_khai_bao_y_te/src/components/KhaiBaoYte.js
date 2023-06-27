@@ -75,7 +75,7 @@ export function KhaiBaoYte() {
                                     <Field type="text" className="form-control"
                                            name="ten"
                                     />
-                                    <ErrorMessage name="ten" component='span' className="error-mess"/>
+                                    x
                                 </div>
                                 <div className="mb-3">
                                     <label className="form-label">Số hộ chiếu/CMND</label>
