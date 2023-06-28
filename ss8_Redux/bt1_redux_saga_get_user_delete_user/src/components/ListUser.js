@@ -24,7 +24,6 @@ export function ListUser() {
                 timer: 2000
             }
         )
-
     }
 
     function deleteUsers(id, name) {

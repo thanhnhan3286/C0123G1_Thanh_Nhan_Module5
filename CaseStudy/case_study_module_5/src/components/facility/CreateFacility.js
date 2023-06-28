@@ -33,7 +33,8 @@ export function CreateFacility() {
                         .min(40, 'Min: 40m2'),
                     rentalCosts: Yup.number()
                         .required('Required')
-                        .min(1000, 'Min: 1000'),
+                        .min(1000, 'Min: 1000')
+                        .max(990000000, 'Max: 10000000'),
                     maxNumberOfPeople: Yup.number()
                         .required('Required')
                         .min(2, 'Min: 2')
@@ -61,7 +62,7 @@ export function CreateFacility() {
                     ({isSubmitting}) => (
                         <div
                             className="container boxed"
-                            style={{marginTop: "2%", width: 700, height: "auto"}}
+                            style={{marginTop: "2%", width: 600, height: "auto"}}
                         >
                             <h2 style={{textAlign: "center", marginTop: 20}}> Thêm mới dịch vụ</h2>
                             <div

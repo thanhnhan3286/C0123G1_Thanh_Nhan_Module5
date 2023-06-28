@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
+import React from "react";
 
-export function List() {
+export function ListContract() {
     return (
         <>
             <div className="row room-grid text-center" style={{margin: "0 10%"}}>
@@ -15,7 +16,7 @@ export function List() {
                         <div className="app-card app-card-orders-table shadow-sm mb-5">
                             <div className="app-card-body">
                                 <div className="table-responsive">
-                                    <table className="table app-table-hover mb-0 text-left">
+                                    <table className="table app-table-hover mb-0 mt-5 text-left">
                                         <thead>
                                         <tr>
                                             <th
@@ -41,8 +42,7 @@ export function List() {
                                                 style={{
                                                     fontSize: 16,
                                                     width: "20%",
-                                                    color: "black",
-                                                    textAlign: "center"
+                                                    color: "black"
                                                 }}
                                             >
                                                 Số tiền đặt cọc
