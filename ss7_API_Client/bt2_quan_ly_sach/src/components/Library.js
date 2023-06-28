@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.css"
 import React, {useEffect, useState} from "react";
 import * as bookService from "../service/BookService"
 import {Link} from "react-router-dom";
+import Swal from "sweetalert2";
 
 export function Library() {
     const [books, setBook] = useState([])
@@ -11,7 +12,30 @@ export function Library() {
     }
     const deleteBook = async (id) => {
         await bookService.deleteBook(id)
+        await Swal.fire(
+            {
+                title: "Deleted!",
+                test: 'Your file has been deleted.',
+                icon: 'success',
+                timer: 2000
+            }
+        )
         fetchApi()
+    }
+    const deleteBooks = async (id,title) => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!" + title,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                deleteBook(id)
+            }
+        })
     }
     useEffect(() => {
         fetchApi()
@@ -43,7 +67,7 @@ export function Library() {
                                 </td>
                                 <td>
                                     <button className="btn btn-danger font-monospace"
-                                            onClick={() => deleteBook(`${book.id}`)}
+                                            onClick={() => deleteBooks(`${book.id}`,`${book.title}`)}
                                     >Delete
                                     </button>
                                 </td>

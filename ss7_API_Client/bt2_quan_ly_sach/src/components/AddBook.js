@@ -6,6 +6,7 @@ import * as bookService from "../service/BookService"
 import {toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import {useNavigate} from "react-router";
+import Swal from "sweetalert2";
 
 export function AddBook() {
     const navigate = useNavigate();
@@ -28,7 +29,12 @@ export function AddBook() {
                     const add = async () => {
                         setSubmitting(false)
                         await bookService.save(values)
-                        toast(`ADDED!!!`);
+                        // toast(`ADDED!!!`);
+                        Swal.fire({
+                            icon:"success",
+                            title:"Them moi thanh cong!!!",
+                            timer: 2000
+                        })
                         resetForm();
                         navigate("/")
                     }
@@ -81,7 +87,7 @@ export function AddBook() {
                     )
                 }
             </Formik>
-            <ToastContainer/>
+            {/*<ToastContainer/>*/}
         </>
     )
 }

@@ -3,7 +3,7 @@
     {
       "id": 3,
       "title": "bánh bèo",
-      "quantity": "20"
+      "quantity": "10"
     },
     {
       "title": "nhân",
@@ -24,6 +24,16 @@
       "title": "Xóm trọ Kungfu",
       "quantity": "1000",
       "id": 7
+    },
+    {
+      "title": "trung nghiax 8",
+      "quantity": "13",
+      "id": 8
+    },
+    {
+      "title": "thien thien",
+      "quantity": "123",
+      "id": 9
     }
   ]
 }

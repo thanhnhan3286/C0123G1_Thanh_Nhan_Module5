@@ -4,6 +4,7 @@ import * as bookService from "../service/BookService";
 import {toast} from "react-toastify";
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import React, {useEffect, useState} from "react";
+import Swal from "sweetalert2";
 
 export function UpdateBook() {
     const navigate = useNavigate()
@@ -40,7 +41,15 @@ export function UpdateBook() {
                     setSubmitting(false)
                     const update = async () => {
                         await bookService.update(values)
-                        toast('Updated!!!');
+                        // toast('Updated!!!');
+                        Swal.fire(
+                            {
+                                title:"Updated!",
+                                test:'Your file has been updated.',
+                                icon:'success',
+                                timer:2000
+                            }
+                        )
                         navigate("/")
                     }
                     update()
