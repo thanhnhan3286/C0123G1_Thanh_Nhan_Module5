@@ -111,9 +111,9 @@
     {
       "id": 1,
       "name": "Huỳnh Đức Định",
-      "typeCustomer": 3,
+      "customerType": 3,
       "birthday": "2023-06-15",
-      "gender": 0,
+      "gender": 1,
       "cmnd": 207379736,
       "phone": "0555779990",
       "email": "heeyeon@gmail.com",
@@ -122,13 +122,68 @@
     {
       "id": 4,
       "name": "Phan Thị Thuỷ Tiên",
-      "typeCustomer": 4,
+      "customerType": 4,
       "birthday": "2023-06-15",
       "gender": 1,
       "cmnd": "111111111",
       "phone": "1111111111",
       "email": "thuytien@gmail.com",
       "address": "Đà nẵng"
+    },
+    {
+      "name": "Dinh Dinh",
+      "birthday": "2023-06-29",
+      "gender": 2,
+      "cmnd": "123456987",
+      "phone": "0123456789",
+      "email": "nhan@gmail.com",
+      "address": "Huế",
+      "customerType": 1,
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "Nhan Nhan nhăn nhó",
+      "birthday": "2023-04-27",
+      "gender": 2,
+      "cmnd": "123456987",
+      "phone": "0123456987",
+      "email": "nhan@gmail.com",
+      "customerType": 2,
+      "address": "Huế"
+    },
+    {
+      "name": "Trung Dang",
+      "birthday": "2007-07-05",
+      "gender": 2,
+      "cmnd": "123456789",
+      "phone": "0116549871",
+      "email": "nhan@gmail.com",
+      "customerType": 2,
+      "address": "Huế",
+      "id": 8
+    },
+    {
+      "name": "Thanh Nhan",
+      "birthday": "2000-02-12",
+      "gender": 2,
+      "cmnd": "123456789",
+      "phone": "0123456789",
+      "email": "nhan123@gmail.com",
+      "customerType": 3,
+      "address": "Huế",
+      "id": 9
+    },
+    {
+      "name": "gahjk",
+      "birthday": "2000-04-04",
+      "gender": 2,
+      "cmnd": "21assss",
+      "phone": "áda",
+      "email": "sdc",
+      "customerType": 4,
+      "address": "sdfa",
+      "id": 10
     }
   ],
   "customerType": [
@@ -153,17 +208,17 @@
       "name": "Member"
     }
   ],
-  "gender" :  [
+  "gender": [
     {
-      "id": 0,
+      "id": 1,
       "gender": "Nữ"
     },
     {
-      "id": 1,
+      "id": 2,
       "gender": "Nam"
     },
     {
-      "id": 2,
+      "id": 3,
       "gender": "Khác"
     }
   ],

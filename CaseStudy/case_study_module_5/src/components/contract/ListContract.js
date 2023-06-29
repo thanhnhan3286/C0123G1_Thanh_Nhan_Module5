@@ -14,7 +14,7 @@ export function ListContract() {
     }
     useEffect(() => {
         fetchApi()
-    })
+    },[])
     // const deleteContractApi = async (id) => {
     //     await contractService.deleteContract(id)
     //     fetchApi()

@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import * as customerService from "../../service/CustomerService"
 import Swal from "sweetalert2";
-import * as facilityService from "../../service/FacilityService";
 
 export function ListCustomer() {
     const navigate = useNavigate();
@@ -140,7 +139,7 @@ export function ListCustomer() {
                                                         <th>{c.cmnd}</th>
                                                         <th>{c.phone}</th>
                                                         <th>{c.email}</th>
-                                                        <th>{customerTypes.find((ct) => ct.id===c.typeCustomer)?.name}</th>
+                                                        <th>{customerTypes.find((ct) => ct.id===c.customerType)?.name}</th>
                                                         <th>
                                                                 <Link to={`/editCustomer/${c.id}`}
                                                                     type="button"

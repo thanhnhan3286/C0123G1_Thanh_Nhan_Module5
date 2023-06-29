@@ -119,7 +119,7 @@ export function CreateFacility() {
                                             aria-label="Small"
                                             aria-describedby="inputGroup-sizing-sm"
                                         >
-                                            <option>--Chọn loại dịch vụ--</option>
+                                            <option value={0}>--Chọn loại dịch vụ--</option>
                                             {
                                                 type.map((type) => (
                                                     <option key={type.id} value={type.id}>{type.name}</option>
@@ -127,7 +127,7 @@ export function CreateFacility() {
                                             }
                                         </Field>
                                     </div>
-                                    <ErrorMessage name="typeId" component="span" className="error-mess m-lg-3"/>
+                                        <ErrorMessage name="typeId" component="span" className="error-mess m-lg-3"/>
                                     <div className="input-group input-group-sm mg" style={{marginTop: 30}}>
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">Tên dịch vụ</span>
@@ -188,7 +188,7 @@ export function CreateFacility() {
                                             <span className="input-group-text">Loại hình cho thuê</span>
                                         </div>
                                         <Field as="select" className="form-select" name="rentalTypeId">
-                                            <option>--Chọn loại hình cho thuê--</option>
+                                            <option value={0}>--Chọn loại hình cho thuê--</option>
                                             {
                                                 rentalType.map((rentalType) => (
                                                     <option key={rentalType.id}
@@ -210,7 +210,7 @@ export function CreateFacility() {
                                             aria-describedby="inputGroup-sizing-sm"
                                             required=""
                                         >
-                                            <option>--Chọn tiêu chuẩn phòng--</option>
+                                            <option value={0}>--Chọn tiêu chuẩn phòng--</option>
                                             {
                                                 roomStandard.map((roomStandard) => (
                                                     <option key={roomStandard.id}
@@ -292,7 +292,7 @@ export function CreateFacility() {
                                     </div>
                                     <ErrorMessage name="image" component='span' className="error-mess m-lg-3"/>
                                     <br/>
-                                    <div style={{textAlign: "center", marginBottom: 30}}>
+                                        <div style={{textAlign: "center", marginBottom: 30}}>
                                         {
                                             isSubmitting ? <ThreeDots visible={true}/> :
                                                 <button type="submit" className="btn btn-success">
