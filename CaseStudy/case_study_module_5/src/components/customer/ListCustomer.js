@@ -1,10 +1,14 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export function ListCustomer() {
     return (
         <>
-            <div className="row room-grid text-center" style={{margin: "0 5%"}}>
+            <div className="row room-grid text-center" style={{margin: "0 10%"}}>
                 <h1 className="mt-5">Danh sách khách hàng</h1>
+                <div className="text-center">
+                    <Link to={`/createCustomer`} className="btn btn-secondary font-weight-light">Thêm mới</Link>
+                </div>
                 <div className="tab-content" id="orders-table-tab-content">
                     <div
                         className="tab-pane fade show active"
@@ -15,7 +19,7 @@ export function ListCustomer() {
                         <div className="app-card app-card-orders-table shadow-sm mb-5">
                             <div className="app-card-body">
                                 <div className="table-responsive">
-                                    <table className="table app-table-hover mb-0 text-left">
+                                    <table className="table app-table-hover mb-0 mt-5 text-left">
                                         <thead>
                                         <tr>
                                             <th

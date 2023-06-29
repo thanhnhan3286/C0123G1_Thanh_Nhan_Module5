@@ -1,19 +1,213 @@
 {
-  "posts": [
+  "facility": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "typeId": 3,
+      "name": "PHÒNG SUITE HƯỚNG BIỂN",
+      "useArea": 84.8,
+      "rentalCosts": "5.000.000",
+      "maxNumberOfPeople": 10,
+      "rentalType": "Day",
+      "roomStandardId": 0,
+      "otherUtilities": "",
+      "areaOfPool": 0,
+      "quantityOfFloor": 0,
+      "freeServiceIncluded": "ĂN sáng, Buffer trưa, Ăn tối (ngày đầu)",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+    },
+    {
+      "id": 2,
+      "typeId": 3,
+      "name": "PHÒNG SUITE HƯỚNG BIỂN",
+      "useArea": 84.8,
+      "rentalCosts": "5.000.000",
+      "maxNumberOfPeople": 10,
+      "rentalType": "Day",
+      "roomStandardId": 0,
+      "otherUtilities": "",
+      "areaOfPool": 0,
+      "quantityOfFloor": 0,
+      "freeServiceIncluded": "ĂN sáng, Buffer trưa, Ăn tối (ngày đầu)",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+    },
+    {
+      "id": 3,
+      "typeId": 3,
+      "name": "PHÒNG SUPERIOR HƯỚNG HỒ",
+      "useArea": 84.8,
+      "rentalCosts": "5.000.000",
+      "maxNumberOfPeople": 10,
+      "rentalType": "Day",
+      "roomStandardId": 0,
+      "otherUtilities": "",
+      "areaOfPool": 0,
+      "quantityOfFloor": 0,
+      "freeServiceIncluded": "ĂN sáng, Buffer trưa, Ăn tối (ngày đầu)",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+    },
+    {
+      "typeId": "1",
+      "name": "Nhan",
+      "useArea": 42,
+      "rentalCosts": 1231,
+      "maxNumberOfPeople": 12,
+      "rentalTypeId": "2",
+      "roomStandardId": 0,
+      "otherUtilities": "123",
+      "quantityOfFloor": 3,
+      "areaOfPool": 45,
+      "freeServiceIncluded": "112321",
+      "image": "131321321",
+      "roomStandard": "2",
+      "id": 4
+    },
+    {
+      "typeId": "1",
+      "name": "Dinh",
+      "useArea": 123,
+      "rentalCosts": 1231,
+      "maxNumberOfPeople": 12,
+      "rentalTypeId": "2",
+      "roomStandardId": 0,
+      "otherUtilities": "Đầy đủ tiện nghi",
+      "quantityOfFloor": 3,
+      "areaOfPool": 62,
+      "freeServiceIncluded": "Vệ sinh định kỳ",
+      "image": "132131",
+      "roomStandard": "1",
+      "id": 5
+    },
+    {
+      "typeId": "1",
+      "name": "Dinh",
+      "useArea": 123,
+      "rentalCosts": 2132131,
+      "maxNumberOfPeople": 22,
+      "rentalTypeId": "1",
+      "roomStandardId": 0,
+      "otherUtilities": "Đầy đủ tiện nghi",
+      "quantityOfFloor": 3,
+      "areaOfPool": 45,
+      "freeServiceIncluded": "Vệ sinh định kỳ",
+      "image": "sdfghjkl;",
+      "roomStandard": "2",
+      "id": 6
     }
   ],
-  "comments": [
+  "type": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Villa"
+    },
+    {
+      "id": 2,
+      "name": "House"
+    },
+    {
+      "id": 3,
+      "name": "Room"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "rentalType": [
+    {
+      "id": 1,
+      "name": "Năm"
+    },
+    {
+      "id": 2,
+      "name": "Tháng"
+    },
+    {
+      "id": 3,
+      "name": "Ngày"
+    },
+    {
+      "id": 4,
+      "name": "Giờ"
+    }
+  ],
+  "roomStandard": [
+    {
+      "id": 1,
+      "name": "Thường"
+    },
+    {
+      "id": 2,
+      "name": "Thương gia"
+    },
+    {
+      "id": 3,
+      "name": "Tổng thống"
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "Huỳnh Đức Định",
+      "typeCustomer": "Gold",
+      "birthday": "2023-06-15",
+      "gender": 0,
+      "cmnd": 207379736,
+      "phone": "0555779990",
+      "email": "heeyeon@gmail.com",
+      "address": "Quảng Nam"
+    },
+    {
+      "id": 4,
+      "name": "Phan Thị Thuỷ Tiên",
+      "typeCustomer": "Silver",
+      "birthday": "2023-06-15",
+      "gender": "1",
+      "cmnd": "111111111",
+      "phone": "1111111111",
+      "email": "thuytien@gmail.com",
+      "address": "Đà nẵng"
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "numberService": "0001",
+      "startDay": "21-01-2023",
+      "endDay": "21-02-2023",
+      "deposit": "5.000.000",
+      "totalMoney": "10.000.000"
+    }
+  ],
+  "typeService": [
+    {
+      "id": 1,
+      "name": "Villa"
+    },
+    {
+      "id": 2,
+      "name": "Room"
+    },
+    {
+      "id": 3,
+      "name": "House"
+    }
+  ],
+  "typeCustomer": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ]
 }

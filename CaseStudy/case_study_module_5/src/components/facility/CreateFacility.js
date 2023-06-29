@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "./formCreateEdit.css"
@@ -7,25 +7,49 @@ import * as Yup from "yup";
 import {toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import {ThreeDots} from "react-loader-spinner";
+import * as facilityService from "../../service/FacilityService";
+import Swal from "sweetalert2";
+import {useNavigate} from "react-router";
 
 export function CreateFacility() {
+    const navigate = useNavigate()
+    const [type, setType] = useState([]);
+    const [rentalType, setRentalType] = useState([]);
+    const [roomStandard, setRoomStandard] = useState([]);
+    const fetchApi = async () => {
+        const rentalTypeList = await facilityService.findAllRentalType()
+        console.log(rentalTypeList);
+        setRentalType(rentalTypeList);
+        const facilityType = await facilityService.findAllFacilityType()
+        console.log(facilityType);
+        setType(facilityType);
+        const roomStandard = await facilityService.findAllRoomStandard()
+        console.log(roomStandard);
+        setRoomStandard(roomStandard);
 
+    }
+    useEffect(() => {
+        fetchApi().then(r => null)
+    }, [])
     return (
         <>
             <Formik
                 initialValues={{
+                    typeId: 0,
                     name: '',
-                    useArea: '',
-                    rentalCosts: '',
-                    maxNumberOfPeople: '',
-                    rentalType: '',
-                    roomStandard: '',
+                    useArea: 0,
+                    rentalCosts: 0,
+                    maxNumberOfPeople: 0,
+                    rentalTypeId: 0,
+                    roomStandardId: 0,
                     otherUtilities: '',
-                    quantityOfFloor: '',
-                    areaOfPool: '',
-                    freeServiceIncluded: ''
+                    quantityOfFloor: 0,
+                    areaOfPool: 0,
+                    freeServiceIncluded: '',
+                    image: ''
                 }}
                 validationSchema={Yup.object({
+                    typeId: Yup.number().required('Không được để trống').min(1, 'Chưa chọn loại dịch vụ'),
                     name: Yup.string()
                         .required('Required'),
                     useArea: Yup.number()
@@ -39,23 +63,32 @@ export function CreateFacility() {
                         .required('Required')
                         .min(2, 'Min: 2')
                         .max(30, 'Max: 30'),
-                    roomStandard: Yup.string()
-                        .required('Required'),
+                    rentalTypeId: Yup.number().required('Không được để trống').min(1, 'Chưa chọn kiểu thuê'),
+                    roomStandard: Yup.number()
+                        .required('Required').min(1, 'Chưa chọn loại phòng'),
                     otherUtilities: Yup.string(),
                     quantityOfFloor: Yup.number()
                         .required('Required')
-                        .min(1,'Min: 1')
-                        .max(10,'Max: 10'),
+                        .min(0, 'Min: 0')
+                        .max(10, 'Max: 10'),
                     areaOfPool: Yup.number()
                         .required('Required')
                         .min(0, 'Min: 0m2 = no pool')
                         .max(1000, 'Mã: 1000m2')
                 })}
-                onSubmit={(values, {setSubmitting}) => {
-                    setTimeout(() => {
-                        setSubmitting(false)
-                        toast(`Add successfully!!!`)
-                    }, 1000)
+                onSubmit={(values, {setSubmitting, resetForm}) => {
+                    setSubmitting(false)
+                    const create = async () => {
+                        await facilityService.save(values)
+                        navigate("/")
+                        await Swal.fire({
+                            icon: "success",
+                            title: "Them moi thanh cong!!!",
+                            timer: 2000
+                        })
+                        resetForm();
+                    }
+                    create()
                 }}
             >
                 {
@@ -71,6 +104,26 @@ export function CreateFacility() {
                                 style={{marginLeft: "10%", marginRight: "10%"}}
                             >
                                 <Form>
+                                    <div className="input-group input-group-sm mg" style={{marginTop: 30}}>
+                                        <div className="input-group-prepend">
+                                            <span className="input-group-text">Loại dịch vụ</span>
+                                        </div>
+                                        <Field
+                                            as="select"
+                                            name="typeId"
+                                            className="form-control"
+                                            aria-label="Small"
+                                            aria-describedby="inputGroup-sizing-sm"
+                                        >
+                                            <option>--Chọn loại dịch vụ--</option>
+                                            {
+                                                type.map((type) => (
+                                                    <option key={type.id} value={type.id}>{type.name}</option>
+                                                ))
+                                            }
+                                        </Field>
+                                    </div>
+                                    <ErrorMessage name="typeId" component="span" className="error-mess m-lg-3"/>
                                     <div className="input-group input-group-sm mg" style={{marginTop: 30}}>
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">Tên dịch vụ</span>
@@ -89,7 +142,7 @@ export function CreateFacility() {
                                             <span className="input-group-text">Diện tích sử dụng</span>
                                         </div>
                                         <Field
-                                            type="text"
+                                            type="number"
                                             name="useArea"
                                             className="form-control"
                                             aria-label="Small"
@@ -124,31 +177,43 @@ export function CreateFacility() {
                                             aria-describedby="inputGroup-sizing-sm"
                                         />
                                     </div>
-                                    <ErrorMessage name="maxNumberOfPeople" component='span' className="error-mess m-lg-3"/>
+                                    <ErrorMessage name="maxNumberOfPeople" component='span'
+                                                  className="error-mess m-lg-3"/>
                                     <div className="input-group input-group-sm mg">
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">Loại hình cho thuê</span>
                                         </div>
-                                        <select className="form-select" name="rentalType">
-                                            <option>Year</option>
-                                            <option>Month</option>
-                                            <option>Day</option>
-                                            <option>Hour</option>
-                                        </select>
+                                        <Field as="select" className="form-select" name="rentalTypeId">
+                                            <option>--Chọn loại hình cho thuê--</option>
+                                            {
+                                                rentalType.map((rentalType) => (
+                                                    <option key={rentalType.id}
+                                                            value={rentalType.id}>{rentalType.name}</option>
+                                                ))
+                                            }
+                                        </Field>
                                     </div>
-                                    <ErrorMessage name="rentalType" component='span' className="error-mess m-lg-3"/>
+                                    <ErrorMessage name="rentalTypeId" component='span' className="error-mess m-lg-3"/>
                                     <div className="input-group input-group-sm mg">
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">Tiêu chuẩn phòng</span>
                                         </div>
                                         <Field
-                                            type="text"
+                                            as="select"
                                             name="roomStandard"
                                             className="form-control"
                                             aria-label="Small"
                                             aria-describedby="inputGroup-sizing-sm"
                                             required=""
-                                        />
+                                        >
+                                            <option>--Chọn tiêu chuẩn phòng--</option>
+                                            {
+                                                roomStandard.map((roomStandard) => (
+                                                    <option key={roomStandard.id}
+                                                            value={roomStandard.id}>{roomStandard.name}</option>
+                                                ))
+                                            }
+                                        </Field>
                                     </div>
                                     <ErrorMessage name="roomStandard" component='span' className="error-mess m-lg-3"/>
                                     <div className="input-group input-group-sm mg">
@@ -171,14 +236,15 @@ export function CreateFacility() {
                                         <Field
                                             type="number"
                                             name="quantityOfFloor"
-                                            min={1}
+                                            min={0}
                                             max={10}
                                             className="form-control"
                                             aria-label="Small"
                                             aria-describedby="inputGroup-sizing-sm"
                                         />
                                     </div>
-                                    <ErrorMessage name="quantityOfFloor" component='span' className="error-mess m-lg-3"/>
+                                    <ErrorMessage name="quantityOfFloor" component='span'
+                                                  className="error-mess m-lg-3"/>
                                     <div className="input-group input-group-sm mg">
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">Diện tích hồ bơi</span>
@@ -206,7 +272,21 @@ export function CreateFacility() {
                                             aria-describedby="inputGroup-sizing-sm"
                                         />
                                     </div>
-                                    <ErrorMessage name="freeServiceIncluded" component='span' className="error-mess m-lg-3"/>
+                                    <ErrorMessage name="freeServiceIncluded" component='span'
+                                                  className="error-mess m-lg-3"/>
+                                    <div className="input-group input-group-sm mg">
+                                        <div className="input-group-prepend">
+                                            <span className="input-group-text">URL hình ảnh</span>
+                                        </div>
+                                        <Field
+                                            type="text"
+                                            name="image"
+                                            className="form-control"
+                                            aria-label="Small"
+                                            aria-describedby="inputGroup-sizing-sm"
+                                        />
+                                    </div>
+                                    <ErrorMessage name="image" component='span' className="error-mess m-lg-3"/>
                                     <br/>
                                     <div style={{textAlign: "center", marginBottom: 30}}>
                                         {

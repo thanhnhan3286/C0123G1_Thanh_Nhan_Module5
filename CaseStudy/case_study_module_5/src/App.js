@@ -1,9 +1,8 @@
-import './App.css';
+
 import {Header} from "./components/Header";
 import React from "react";
 import {Footer} from "./components/Footer";
 import {ListFacility} from "./components/facility/ListFacility";
-import "./components/styleHeader.css"
 import {CreateFacility} from "./components/facility/CreateFacility";
 import {EditFacility} from "./components/facility/EditFacility";
 import {ListCustomer} from "./components/customer/ListCustomer";
@@ -13,6 +12,7 @@ import {ToastContainer} from "react-toastify";
 import {CreateCustomer} from "./components/customer/CreateCustomer";
 import {ListContract} from "./components/contract/ListContract";
 import {CreateContract} from "./components/contract/CreateContract";
+import {HeaderAdmin} from "./components/HeaderAdmin";
 function App() {
     return (
         <>
@@ -21,10 +21,10 @@ function App() {
                 <Route path='/' element={<ListFacility/>}/>
                 <Route path='/createFacility' element={<CreateFacility/>}/>
                 <Route path='/editFacility' element={<EditFacility/>}/>
-                <Route path='/listCustomer' element={<ListCustomer/>}/>
+                <Route path='/customer' element={<ListCustomer/>}/>
                 <Route path='/editCustomer' element={<EditCustomer/>}/>
                 <Route path='/createCustomer' element={<CreateCustomer/>}/>
-                <Route path='/listContract' element={<ListContract/>}/>
+                <Route path='/contract' element={<ListContract/>}/>
                 <Route path='/createContract' element={<CreateContract/>}/>
             </Routes>
             <Footer/>

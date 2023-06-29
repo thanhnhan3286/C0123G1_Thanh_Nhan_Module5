@@ -1,11 +1,15 @@
 import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
+import {Link} from "react-router-dom";
 
 export function ListContract() {
     return (
         <>
             <div className="row room-grid text-center" style={{margin: "0 10%"}}>
                 <h1 className="mt-5">Danh sách các hợp đồng tại Furama</h1>
+                <div className="text-center">
+                    <Link to={`/createContract`} className="btn btn-secondary font-weight-light">Thêm mới</Link>
+                </div>
                 <div className="tab-content" id="orders-table-tab-content">
                     <div
                         className="tab-pane fade show active"
@@ -32,16 +36,16 @@ export function ListContract() {
                                             <th style={{fontSize: 16, width: "20%", color: "black"}}>
                                                 Tên khách hàng
                                             </th>
-                                            <th style={{fontSize: 16, width: "15%", color: "black"}}>
+                                            <th style={{fontSize: 16, width: "20%", color: "black"}}>
                                                 Ngày làm hợp đồng
                                             </th>
-                                            <th style={{fontSize: 16, width: "15%", color: "black"}}>
+                                            <th style={{fontSize: 16, width: "20%", color: "black"}}>
                                                 Ngày kết thúc hợp đồng
                                             </th>
                                             <th
                                                 style={{
                                                     fontSize: 16,
-                                                    width: "20%",
+                                                    width: "15%",
                                                     color: "black"
                                                 }}
                                             >

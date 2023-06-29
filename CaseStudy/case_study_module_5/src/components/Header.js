@@ -45,6 +45,28 @@ export function Header() {
                                         </Link>
                                     </li>
                                     <li
+                                        id="nav-menu-item-5006"
+                                        className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
+
+                                    >
+                                        <Link to={`/customer`}
+                                              className="nav-link main-menu-link"
+                                        >
+                                            KHÁCH HÀNG
+                                        </Link>
+                                    </li>
+                                    <li
+                                        id="nav-menu-item-5006"
+                                        className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
+
+                                    >
+                                        <Link to={`/contract`}
+                                              className="nav-link main-menu-link"
+                                        >
+                                            HỢP ĐỒNG
+                                        </Link>
+                                    </li>
+                                    <li
                                         id="nav-menu-item-5008"
                                         className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
                                     >
