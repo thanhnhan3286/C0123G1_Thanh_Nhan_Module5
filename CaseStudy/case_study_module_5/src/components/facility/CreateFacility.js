@@ -18,15 +18,14 @@ export function CreateFacility() {
     const [roomStandard, setRoomStandard] = useState([]);
     const fetchApi = async () => {
         const rentalTypeList = await facilityService.findAllRentalType()
-        console.log(rentalTypeList);
+        // console.log(rentalTypeList);
         setRentalType(rentalTypeList);
         const facilityType = await facilityService.findAllFacilityType()
-        console.log(facilityType);
+        // console.log(facilityType);
         setType(facilityType);
         const roomStandard = await facilityService.findAllRoomStandard()
-        console.log(roomStandard);
+        // console.log(roomStandard);
         setRoomStandard(roomStandard);
-
     }
     useEffect(() => {
         fetchApi().then(r => null)
@@ -64,7 +63,7 @@ export function CreateFacility() {
                         .min(2, 'Min: 2')
                         .max(30, 'Max: 30'),
                     rentalTypeId: Yup.number().required('Không được để trống').min(1, 'Chưa chọn kiểu thuê'),
-                    roomStandard: Yup.number()
+                    roomStandardId: Yup.number()
                         .required('Required').min(1, 'Chưa chọn loại phòng'),
                     otherUtilities: Yup.string(),
                     quantityOfFloor: Yup.number()
@@ -79,7 +78,12 @@ export function CreateFacility() {
                 onSubmit={(values, {setSubmitting, resetForm}) => {
                     setSubmitting(false)
                     const create = async () => {
-                        await facilityService.save(values)
+                        await facilityService.create({
+                            ...values,
+                            typeId: +values.typeId,
+                            rentalTypeId: +values.rentalTypeId,
+                            roomStandardId: +values.roomStandardId
+                        })
                         navigate("/")
                         await Swal.fire({
                             icon: "success",
@@ -200,7 +204,7 @@ export function CreateFacility() {
                                         </div>
                                         <Field
                                             as="select"
-                                            name="roomStandard"
+                                            name="roomStandardId"
                                             className="form-control"
                                             aria-label="Small"
                                             aria-describedby="inputGroup-sizing-sm"
@@ -215,7 +219,7 @@ export function CreateFacility() {
                                             }
                                         </Field>
                                     </div>
-                                    <ErrorMessage name="roomStandard" component='span' className="error-mess m-lg-3"/>
+                                    <ErrorMessage name="roomStandardId" component='span' className="error-mess m-lg-3"/>
                                     <div className="input-group input-group-sm mg">
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">Mô tả các tiện ích khác</span>

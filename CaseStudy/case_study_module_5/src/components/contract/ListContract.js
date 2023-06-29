@@ -1,14 +1,54 @@
 import "bootstrap/dist/css/bootstrap.css";
-import React from "react";
-import {Link} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
+import * as contractService from "../../service/ContractService";
+import Swal from "sweetalert2";
 
 export function ListContract() {
+    const navigate = useNavigate();
+    const [contract, setContract] = useState([]);
+    const fetchApi = async () => {
+        const res = await contractService.findAll();
+        console.log(res);
+        setContract(res);
+    }
+    useEffect(() => {
+        fetchApi()
+    })
+    // const deleteContractApi = async (id) => {
+    //     await contractService.deleteContract(id)
+    //     fetchApi()
+    //     await Swal.fire(
+    //         {
+    //             title: "Xóa thành công!",
+    //             icon: 'success',
+    //             timer: 2000
+    //         }
+    //     )
+    // }
+    // function deleteContract(id, name) {
+    //     Swal.fire({
+    //         title: 'BẠN CÓ CHẮC CHẮN?',
+    //         text: "XÓA HỢP ĐỒNG " + name + " KHÔNG?",
+    //         icon: 'warning',
+    //         showCancelButton: true,
+    //         cancelButtonColor: '#3085d6',
+    //         cancelButtonText: 'HỦY',
+    //         confirmButtonColor: '#d33',
+    //         confirmButtonText: 'XÓA'
+    //     }).then((result) => {
+    //         if (result.isConfirmed) {
+    //             deleteContractApi(id).then(r => null)
+    //         }
+    //     })
+    // }
     return (
         <>
-            <div className="row room-grid text-center" style={{margin: "0 10%"}}>
-                <h1 className="mt-5">Danh sách các hợp đồng tại Furama</h1>
+            <div className="row room-grid text-center" style={{margin: "0 20%"}}>
+                <h1 className="mt-5 font-weight-bold">Danh sách các hợp đồng tại Furama</h1>
                 <div className="text-center">
-                    <Link to={`/createContract`} className="btn btn-secondary font-weight-light">Thêm mới</Link>
+                    <Link to={`/createContract`} className="btn btn-secondary font-weight-light"
+                    style={{backgroundColor:"#046056"}}>Thêm mới</Link>
                 </div>
                 <div className="tab-content" id="orders-table-tab-content">
                     <div
@@ -26,20 +66,20 @@ export function ListContract() {
                                             <th
                                                 style={{
                                                     fontSize: 16,
-                                                    width: "10%",
+                                                    width: "14%",
                                                     color: "black",
                                                     textAlign: "center"
                                                 }}
                                             >
                                                 Mã hợp đồng
                                             </th>
-                                            <th style={{fontSize: 16, width: "20%", color: "black"}}>
-                                                Tên khách hàng
-                                            </th>
-                                            <th style={{fontSize: 16, width: "20%", color: "black"}}>
+                                            {/*<th style={{fontSize: 16, width: "20%", color: "black"}}>*/}
+                                            {/*    Tên khách hàng*/}
+                                            {/*</th>*/}
+                                            <th style={{fontSize: 16, width: "16%", color: "black"}}>
                                                 Ngày làm hợp đồng
                                             </th>
-                                            <th style={{fontSize: 16, width: "20%", color: "black"}}>
+                                            <th style={{fontSize: 16, width: "16%", color: "black"}}>
                                                 Ngày kết thúc hợp đồng
                                             </th>
                                             <th
@@ -54,20 +94,19 @@ export function ListContract() {
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <th style={{textAlign: "center"}}>1</th>
-                                            <th>Đỗ Thành Nhân</th>
-                                            <th>06/03/2023</th>
-                                            <th>12/03/2023</th>
-                                            <th>1200</th>
-                                        </tr>
-                                        <tr>
-                                            <th style={{textAlign: "center"}}>2</th>
-                                            <th>Huỳnh Đức Định</th>
-                                            <th>06/08/2023</th>
-                                            <th>24/08/2023</th>
-                                            <th>90000</th>
-                                        </tr>
+                                        {
+                                            contract.map((c, index) => {
+                                                return (
+                                                    <tr key={index}>
+                                                        <th style={{textAlign: "center"}}>{c.numberService}</th>
+                                                        {/*<th>{c.nameCustomer}</th>*/}
+                                                        <th>{c.startDay}</th>
+                                                        <th>{c.endDay}</th>
+                                                        <th>{c.deposit}</th>
+                                                    </tr>
+                                                )
+                                            })
+                                        }
                                         </tbody>
                                     </table>
                                 </div>

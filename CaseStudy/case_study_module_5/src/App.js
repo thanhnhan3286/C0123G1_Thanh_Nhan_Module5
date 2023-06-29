@@ -20,9 +20,9 @@ function App() {
             <Routes>
                 <Route path='/' element={<ListFacility/>}/>
                 <Route path='/createFacility' element={<CreateFacility/>}/>
-                <Route path='/editFacility' element={<EditFacility/>}/>
+                <Route path='/editFacility/:id' element={<EditFacility/>}/>
                 <Route path='/customer' element={<ListCustomer/>}/>
-                <Route path='/editCustomer' element={<EditCustomer/>}/>
+                <Route path='/editCustomer/:id' element={<EditCustomer/>}/>
                 <Route path='/createCustomer' element={<CreateCustomer/>}/>
                 <Route path='/contract' element={<ListContract/>}/>
                 <Route path='/createContract' element={<CreateContract/>}/>

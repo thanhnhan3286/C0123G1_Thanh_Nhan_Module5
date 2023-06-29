@@ -7,8 +7,8 @@
       "useArea": 84.8,
       "rentalCosts": "5.000.000",
       "maxNumberOfPeople": 10,
-      "rentalType": "Day",
-      "roomStandardId": 0,
+      "rentalTypeId": 1,
+      "roomStandardId": 2,
       "otherUtilities": "",
       "areaOfPool": 0,
       "quantityOfFloor": 0,
@@ -22,8 +22,8 @@
       "useArea": 84.8,
       "rentalCosts": "5.000.000",
       "maxNumberOfPeople": 10,
-      "rentalType": "Day",
-      "roomStandardId": 0,
+      "rentalTypeId": 2,
+      "roomStandardId": 1,
       "otherUtilities": "",
       "areaOfPool": 0,
       "quantityOfFloor": 0,
@@ -37,8 +37,8 @@
       "useArea": 84.8,
       "rentalCosts": "5.000.000",
       "maxNumberOfPeople": 10,
-      "rentalType": "Day",
-      "roomStandardId": 0,
+      "rentalTypeId": 3,
+      "roomStandardId": 3,
       "otherUtilities": "",
       "areaOfPool": 0,
       "quantityOfFloor": 0,
@@ -46,52 +46,19 @@
       "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
     },
     {
-      "typeId": "1",
-      "name": "Nhan",
-      "useArea": 42,
-      "rentalCosts": 1231,
-      "maxNumberOfPeople": 12,
-      "rentalTypeId": "2",
-      "roomStandardId": 0,
-      "otherUtilities": "123",
-      "quantityOfFloor": 3,
-      "areaOfPool": 45,
-      "freeServiceIncluded": "112321",
-      "image": "131321321",
-      "roomStandard": "2",
-      "id": 4
-    },
-    {
-      "typeId": "1",
-      "name": "Dinh",
-      "useArea": 123,
-      "rentalCosts": 1231,
-      "maxNumberOfPeople": 12,
-      "rentalTypeId": "2",
-      "roomStandardId": 0,
+      "id": 4,
+      "typeId": 2,
+      "name": "ASUS ROG",
+      "useArea": 200,
+      "rentalCosts": 2000,
+      "maxNumberOfPeople": 5,
+      "rentalTypeId": 2,
+      "roomStandardId": 1,
       "otherUtilities": "Đầy đủ tiện nghi",
-      "quantityOfFloor": 3,
-      "areaOfPool": 62,
+      "quantityOfFloor": 2,
+      "areaOfPool": 50,
       "freeServiceIncluded": "Vệ sinh định kỳ",
-      "image": "132131",
-      "roomStandard": "1",
-      "id": 5
-    },
-    {
-      "typeId": "1",
-      "name": "Dinh",
-      "useArea": 123,
-      "rentalCosts": 2132131,
-      "maxNumberOfPeople": 22,
-      "rentalTypeId": "1",
-      "roomStandardId": 0,
-      "otherUtilities": "Đầy đủ tiện nghi",
-      "quantityOfFloor": 3,
-      "areaOfPool": 45,
-      "freeServiceIncluded": "Vệ sinh định kỳ",
-      "image": "sdfghjkl;",
-      "roomStandard": "2",
-      "id": 6
+      "image": "13213213"
     }
   ],
   "type": [
@@ -144,7 +111,7 @@
     {
       "id": 1,
       "name": "Huỳnh Đức Định",
-      "typeCustomer": "Gold",
+      "typeCustomer": 3,
       "birthday": "2023-06-15",
       "gender": 0,
       "cmnd": 207379736,
@@ -155,40 +122,16 @@
     {
       "id": 4,
       "name": "Phan Thị Thuỷ Tiên",
-      "typeCustomer": "Silver",
+      "typeCustomer": 4,
       "birthday": "2023-06-15",
-      "gender": "1",
+      "gender": 1,
       "cmnd": "111111111",
       "phone": "1111111111",
       "email": "thuytien@gmail.com",
       "address": "Đà nẵng"
     }
   ],
-  "contract": [
-    {
-      "id": 1,
-      "numberService": "0001",
-      "startDay": "21-01-2023",
-      "endDay": "21-02-2023",
-      "deposit": "5.000.000",
-      "totalMoney": "10.000.000"
-    }
-  ],
-  "typeService": [
-    {
-      "id": 1,
-      "name": "Villa"
-    },
-    {
-      "id": 2,
-      "name": "Room"
-    },
-    {
-      "id": 3,
-      "name": "House"
-    }
-  ],
-  "typeCustomer": [
+  "customerType": [
     {
       "id": 1,
       "name": "Diamond"
@@ -208,6 +151,31 @@
     {
       "id": 5,
       "name": "Member"
+    }
+  ],
+  "gender" :  [
+    {
+      "id": 0,
+      "gender": "Nữ"
+    },
+    {
+      "id": 1,
+      "gender": "Nam"
+    },
+    {
+      "id": 2,
+      "gender": "Khác"
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "nameCustomer": "Nhân",
+      "numberService": "0001",
+      "startDay": "21-01-2023",
+      "endDay": "21-02-2023",
+      "deposit": "5.000.000",
+      "totalMoney": "10.000.000"
     }
   ]
 }

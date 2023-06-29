@@ -1,6 +1,22 @@
 import axios from "axios"
 
-export const save = async (values) => {
+export const save = async (facility) => {
+    try {
+        await  axios.put('http://localhost:8080/facility/'+ facility.id, facility)
+    } catch (e) {
+        console.log(e)
+    }
+}
+export const getFacilityApi = async (id) => {
+    try {
+        return (await axios.get('http://localhost:8080/facility/'+ id)).data
+    }catch (e) {
+        console.log(e)
+    }
+}
+
+
+export const create = async (values) => {
     try {
         await axios.post('http://localhost:8080/facility', values)
     } catch (e) {

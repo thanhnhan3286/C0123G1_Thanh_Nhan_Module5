@@ -16,6 +16,7 @@ export function ListFacility() {
     },[])
     const deleteService = async (id) => {
         await facilityService.deleteFacility(id)
+        fetchApi()
         await Swal.fire(
             {
                 title: "Xóa thành công!",
@@ -23,7 +24,7 @@ export function ListFacility() {
                 timer: 2000
             }
         )
-        fetchApi()
+
     }
 
     function deleteFacility(id, name) {
@@ -101,7 +102,7 @@ export function ListFacility() {
                                             </div>
                                             <div className="col-auto mt-0 justify-content-between d-flex">
                                                 <div style={{paddingRight: "10px"}}>
-                                                    <Link to={`/editFacility`}
+                                                    <Link to={`/editFacility/${facility.id}`}
                                                           className="btn btn-primary room-qview border-0"
                                                           style={{backgroundColor: "#0d6056",}}
                                                     >
