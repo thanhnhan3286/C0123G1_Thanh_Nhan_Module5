@@ -98,7 +98,7 @@ export function ListContract() {
                                             contract.map((c, index) => {
                                                 return (
                                                     <tr key={index}>
-                                                        <th style={{textAlign: "center"}}>{c.numberService}</th>
+                                                        <th style={{textAlign: "center"}}>{c.contractCode}</th>
                                                         {/*<th>{c.nameCustomer}</th>*/}
                                                         <th>{c.startDay}</th>
                                                         <th>{c.endDay}</th>

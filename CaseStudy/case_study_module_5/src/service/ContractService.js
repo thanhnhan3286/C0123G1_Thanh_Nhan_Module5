@@ -1,5 +1,14 @@
 import axios from "axios";
 
+export const create = async (param) => {
+    try {
+        await axios.post('http://localhost:8080/contract', param)
+    }catch (e) {
+        console.log(e)
+    }
+}
+
+
 export const deleteContract = async (id) => {
     try{
         await axios.delete('http://localhost:8080/contract/' +id)

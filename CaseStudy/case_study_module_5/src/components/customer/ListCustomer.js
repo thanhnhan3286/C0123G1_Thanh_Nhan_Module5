@@ -177,6 +177,34 @@ export function ListCustomer() {
                     </div>
                 </div>
                 {/*//tab-content*/}
+                <nav aria-label="Page navigation example">
+                    <ul className="pagination justify-content-center ">
+                        <li className="page-item ">
+                            <a
+                                className="page-link"
+                                href="@{'/orderController/'(page=${orderPage.number -1})}"
+                                if="${orderPage.hasPrevious()}"
+                            >
+                                Previous
+                            </a>
+                        </li>
+                        {/*                        <li style="border: 1px solid #CCCCCC" class="page-item active" ><a class="page-link active" th:text="${pageNo}" th:href="@{/(page=${pageNo})}"></a></li>*/}
+                        <li className="page-item    ">
+                            <a className="page-link" text="${orderPage.number +1}">
+                                1
+                            </a>
+                        </li>
+                        <li className="page-item">
+                            <a
+                                className="page-link"
+                                href="@{'/orderController/'(page=${orderPage.number +1})}"
+                                if="${orderPage.hasNext()}"
+                            >
+                                Next
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </>
     )

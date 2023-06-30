@@ -14,6 +14,7 @@ import {useNavigate} from "react-router";
 export function CreateFacility() {
     const navigate = useNavigate()
     const [type, setType] = useState([]);
+    const [typeFacility, setTypeFacility] = useState("1");
     const [rentalType, setRentalType] = useState([]);
     const [roomStandard, setRoomStandard] = useState([]);
     const fetchApi = async () => {
@@ -73,7 +74,8 @@ export function CreateFacility() {
                     areaOfPool: Yup.number()
                         .required('Required')
                         .min(0, 'Min: 0m2 = no pool')
-                        .max(1000, 'Mã: 1000m2')
+                        .max(1000, 'Mã: 1000m2'),
+                    image: Yup.string().required('Không được để trống')
                 })}
                 onSubmit={(values, {setSubmitting, resetForm}) => {
                     setSubmitting(false)
@@ -113,6 +115,7 @@ export function CreateFacility() {
                                             <span className="input-group-text">Loại dịch vụ</span>
                                         </div>
                                         <Field
+                                            onClick={(event) => setTypeFacility(event.target.value)}
                                             as="select"
                                             name="typeId"
                                             className="form-control"
@@ -127,7 +130,7 @@ export function CreateFacility() {
                                             }
                                         </Field>
                                     </div>
-                                        <ErrorMessage name="typeId" component="span" className="error-mess m-lg-3"/>
+                                    <ErrorMessage name="typeId" component="span" className="error-mess m-lg-3"/>
                                     <div className="input-group input-group-sm mg" style={{marginTop: 30}}>
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">Tên dịch vụ</span>
@@ -198,28 +201,49 @@ export function CreateFacility() {
                                         </Field>
                                     </div>
                                     <ErrorMessage name="rentalTypeId" component='span' className="error-mess m-lg-3"/>
-                                    <div className="input-group input-group-sm mg">
-                                        <div className="input-group-prepend">
-                                            <span className="input-group-text">Tiêu chuẩn phòng</span>
-                                        </div>
-                                        <Field
-                                            as="select"
-                                            name="roomStandardId"
-                                            className="form-control"
-                                            aria-label="Small"
-                                            aria-describedby="inputGroup-sizing-sm"
-                                            required=""
-                                        >
-                                            <option value={0}>--Chọn tiêu chuẩn phòng--</option>
-                                            {
-                                                roomStandard.map((roomStandard) => (
-                                                    <option key={roomStandard.id}
-                                                            value={roomStandard.id}>{roomStandard.name}</option>
-                                                ))
-                                            }
-                                        </Field>
-                                    </div>
-                                    <ErrorMessage name="roomStandardId" component='span' className="error-mess m-lg-3"/>
+                                    {/*{type === 'Room' ?*/}
+                                    {/*    <div className="col-md-12 form-group mt-2 mt-md-0">*/}
+                                    {/*        <input*/}
+                                    {/*            type="text"*/}
+                                    {/*            className="form-control"*/}
+                                    {/*            name="freeServiceIncluded"*/}
+                                    {/*            placeholder="Dịch vụ miễn phí đi kèm"*/}
+                                    {/*        />*/}
+                                    {/*        <ErrorMessage name="freeServiceIncluded" component="span" className="error-r" />*/}
+                                    {/*    </div>*/}
+                                    {/*    : ''*/}
+                                    {/*}*/}
+                                    {
+                                        typeFacility === "3" ?
+                                            '' :
+                                            <div>
+                                                <div className="input-group input-group-sm mg">
+                                                    <div className="input-group-prepend">
+                                                        <span className="input-group-text">Tiêu chuẩn phòng</span>
+                                                    </div>
+                                                    <Field
+                                                        as="select"
+                                                        name="roomStandardId"
+                                                        className="form-control"
+                                                        aria-label="Small"
+                                                        aria-describedby="inputGroup-sizing-sm"
+                                                        required=""
+                                                    >
+                                                        <option value={0}>--Chọn tiêu chuẩn phòng--</option>
+                                                        {
+                                                            roomStandard.map((roomStandard) => (
+                                                                <option key={roomStandard.id}
+                                                                        value={roomStandard.id}>{roomStandard.name}</option>
+                                                            ))
+                                                        }
+                                                    </Field>
+                                                </div>
+                                                <ErrorMessage name="roomStandardId" component='span'
+                                                              className="error-mess m-lg-3"/>
+                                            </div>
+                                    }
+
+
                                     <div className="input-group input-group-sm mg">
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">Mô tả các tiện ích khác</span>
@@ -292,7 +316,7 @@ export function CreateFacility() {
                                     </div>
                                     <ErrorMessage name="image" component='span' className="error-mess m-lg-3"/>
                                     <br/>
-                                        <div style={{textAlign: "center", marginBottom: 30}}>
+                                    <div style={{textAlign: "center", marginBottom: 30}}>
                                         {
                                             isSubmitting ? <ThreeDots visible={true}/> :
                                                 <button type="submit" className="btn btn-success">
