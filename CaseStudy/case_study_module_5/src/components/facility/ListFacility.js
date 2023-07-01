@@ -24,7 +24,6 @@ export function ListFacility() {
                 timer: 2000
             }
         )
-
     }
 
     function deleteFacility(id, name) {

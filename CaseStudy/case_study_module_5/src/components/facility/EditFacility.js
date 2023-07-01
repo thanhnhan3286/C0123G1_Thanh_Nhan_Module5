@@ -97,7 +97,7 @@ export function EditFacility() {
                         navigate("/")
                         await Swal.fire({
                             icon: "success",
-                            title: "Thay đổ thông tinh dịch vụ thành công!!!",
+                            title: "Thay đổi thông tinh dịch vụ thành công!!!",
                             timer: 2000
                         })
                         resetForm();

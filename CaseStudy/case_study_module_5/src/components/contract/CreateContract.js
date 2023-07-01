@@ -14,6 +14,8 @@ export function CreateContract() {
     const navigate = useNavigate()
     const [customer, setCustomer] = useState([]);
     const [facility, setFacility] = useState([]);
+    // const [typeFacility, setTypeFacility] = useState();
+    const [code, setCode] = useState('');
     const getListCustomerApi = async () => {
         const res = await customerService.findAll();
         setCustomer(res);
@@ -23,17 +25,26 @@ export function CreateContract() {
         const res = await facilityService.findAll();
         setFacility(res);
     };
+    const createContractCodeApi = async () => {
+        const res = await contractService.createCode();
+        console.log(res)
+        setCode(res);
+    }
 
     useEffect(() => {
         getListCustomerApi();
         getListFacilityTypesApi();
+        createContractCodeApi()
     }, []);
+    if (!code) {
+        return null;
+    }
     return (
         <>
             <Formik initialValues={{
                 customerId: 0,
                 facilityId: 0,
-                contractCode: '',
+                contractCode: code,
                 startDay: '',
                 endDay: '',
                 deposit: '',
@@ -42,9 +53,9 @@ export function CreateContract() {
                     validationSchema={yup.object({
                         customerId: yup.number().required('Không được để trống!!!').min(1, 'Chưa chọn khách hàng!!!'),
                         facilityId: yup.number().required('Không được để trống!!!').min(1, 'Chưa chọn khách hàng!!!'),
-                        contractCode: yup.string().required('Không được để trống!!!')
-                            // .matches(/^[A-Z][a-z]*(\s[A-Z][a-z]*)+$/, 'Viết không dấu, in hoa chữ đầu'),
-                            .matches(/^(VL-|HO-|RO-)(\d){5}$/, 'Vd: HO-12345'),
+                        // contractCode: yup.string().required('Không được để trống!!!')
+                        //     // .matches(/^[A-Z][a-z]*(\s[A-Z][a-z]*)+$/, 'Viết không dấu, in hoa chữ đầu'),
+                        //     .matches(/^(VL-|HO-|RO-)(\d){5}$/, 'Vd: HO-12345'),
                         startDay: yup.date().required('Không được để trống!!!'),
                         endDay: yup.date().required('Không được để trống!!!'),
                         deposit: yup.number().required('Không được để trống!!!').min(800, 'Đặt cọc ít nhất 800$'),
@@ -52,9 +63,11 @@ export function CreateContract() {
                     })}
                     onSubmit={async (values, {setSubmitting, resetForm}) => {
                         setSubmitting(false)
+                        console.log(values.facilityId)
                         const create = async () => {
                             await contractService.create({
                                 ...values,
+                                contractCode: await contractService.createContractCode((await facilityService.getFacilityApi(values.facilityId)).typeId.toString(), code),
                                 customerId: +values.customerId,
                                 facilityId: +values.facilityId
                             })
@@ -109,6 +122,7 @@ export function CreateContract() {
                                             <span className="input-group-text">Chọn dịch vụ</span>
                                         </div>
                                         <Field
+                                            // onClick={(event) => setTypeFacility(event.target.value)}
                                             as="select"
                                             name="facilityId"
                                             className="form-control"
@@ -131,6 +145,8 @@ export function CreateContract() {
                                             <span className="input-group-text">Mã hợp đồng</span>
                                         </div>
                                         <Field
+                                            style={{textAlign:"center"}}
+                                            disabled
                                             type="text"
                                             name="contractCode"
                                             className="form-control"

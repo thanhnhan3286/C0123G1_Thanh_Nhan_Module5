@@ -20,13 +20,13 @@
       "typeId": 3,
       "name": "PHÒNG SUITE HƯỚNG BIỂN",
       "useArea": 84.8,
-      "rentalCosts": "5.000.000",
+      "rentalCosts": 50000,
       "maxNumberOfPeople": 10,
       "rentalTypeId": 2,
       "roomStandardId": 1,
-      "otherUtilities": "",
-      "areaOfPool": 0,
+      "otherUtilities": "Đầy đủ tiện nghi",
       "quantityOfFloor": 0,
+      "areaOfPool": 49,
       "freeServiceIncluded": "ĂN sáng, Buffer trưa, Ăn tối (ngày đầu)",
       "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
     },
@@ -46,93 +46,96 @@
       "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
     },
     {
-      "id": 4,
-      "typeId": 2,
-      "name": "ASUS ROG",
-      "useArea": 200,
-      "rentalCosts": 2000,
-      "maxNumberOfPeople": 5,
+      "id": 9,
+      "typeId": 3,
+      "name": "PHÒNG SUITE HƯỚNG BIỂN",
+      "useArea": 84.8,
+      "rentalCosts": 6000,
+      "maxNumberOfPeople": 10,
+      "rentalTypeId": 1,
+      "roomStandardId": 2,
+      "otherUtilities": "",
+      "areaOfPool": 0,
+      "quantityOfFloor": 0,
+      "freeServiceIncluded": "ĂN sáng, Buffer trưa, Ăn tối (ngày đầu)",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+    },
+    {
+      "id": 10,
+      "typeId": 1,
+      "name": "VILA SUITE HƯỚNG BIỂN",
+      "useArea": 300,
+      "rentalCosts": 50000,
+      "maxNumberOfPeople": 10,
       "rentalTypeId": 2,
       "roomStandardId": 1,
       "otherUtilities": "Đầy đủ tiện nghi",
-      "quantityOfFloor": 2,
-      "areaOfPool": 50,
-      "freeServiceIncluded": "Vệ sinh định kỳ",
-      "image": "13213213"
+      "quantityOfFloor": 0,
+      "areaOfPool": 49,
+      "freeServiceIncluded": "ĂN sáng, Buffer trưa, Ăn tối (ngày đầu)",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
     },
     {
-      "typeId": 3,
-      "name": "Dinh",
-      "useArea": 46,
-      "rentalCosts": 1231,
-      "maxNumberOfPeople": 3,
-      "rentalTypeId": 2,
-      "roomStandardId": 0,
-      "otherUtilities": "Đầy đủ tiện nghi",
-      "quantityOfFloor": 2,
-      "areaOfPool": 50,
-      "freeServiceIncluded": "Vệ sinh định kỳ",
-      "image": "sdfghjkl;",
-      "id": 5
-    },
-    {
-      "typeId": 3,
-      "name": "Dinh",
-      "useArea": 45,
-      "rentalCosts": 1234,
-      "maxNumberOfPeople": 3,
-      "rentalTypeId": 2,
-      "roomStandardId": 2,
-      "otherUtilities": "123",
-      "quantityOfFloor": 2,
-      "areaOfPool": 45,
-      "freeServiceIncluded": "Vệ sinh định kỳ",
-      "image": "132131",
-      "id": 6
-    },
-    {
-      "typeId": 3,
-      "name": "Nhan",
-      "useArea": 46,
-      "rentalCosts": 4567,
-      "maxNumberOfPeople": 3,
-      "rentalTypeId": 2,
+      "id": 11,
+      "typeId": 2,
+      "name": "NHÀ SUPERIOR HƯỚNG HỒ",
+      "useArea": 100,
+      "rentalCosts": 20000,
+      "maxNumberOfPeople": 10,
+      "rentalTypeId": 3,
       "roomStandardId": 3,
-      "otherUtilities": "Đầy đủ tiện nghi",
-      "quantityOfFloor": 3,
-      "areaOfPool": 378,
-      "freeServiceIncluded": "Vệ sinh định kỳ",
-      "image": "ấdasdasdasd",
-      "id": 7
+      "otherUtilities": "",
+      "areaOfPool": 0,
+      "quantityOfFloor": 0,
+      "freeServiceIncluded": "ĂN sáng, Buffer trưa, Ăn tối (ngày đầu)",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
     },
     {
       "typeId": 3,
-      "name": "Nhan",
-      "useArea": 45,
-      "rentalCosts": 4512,
-      "maxNumberOfPeople": 2,
-      "rentalTypeId": 2,
+      "name": "Phòng tổng thống",
+      "useArea": 100,
+      "rentalCosts": 1500,
+      "maxNumberOfPeople": 3,
+      "rentalTypeId": 3,
       "roomStandardId": 0,
-      "otherUtilities": "Đầy đủ tiện nghi",
-      "quantityOfFloor": 2,
-      "areaOfPool": 45,
+      "otherUtilities": "",
+      "quantityOfFloor": 0,
+      "areaOfPool": 0,
       "freeServiceIncluded": "Vệ sinh định kỳ",
-      "image": "ấdasdasdasd",
-      "id": 8
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg",
+      "id": 13
+    },
+    {
+      "typeId": 3,
+      "name": "Phòng Bình Dân",
+      "useArea": 40,
+      "rentalCosts": 1200,
+      "maxNumberOfPeople": 2,
+      "rentalTypeId": 3,
+      "roomStandardId": 0,
+      "otherUtilities": "",
+      "quantityOfFloor": 0,
+      "areaOfPool": 0,
+      "freeServiceIncluded": "Vệ sinh định kỳ",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg",
+      "id": 14
     }
   ],
   "type": [
     {
       "id": 1,
-      "name": "Villa"
+      "name": "Villa",
+      "code": "VI"
     },
     {
       "id": 2,
-      "name": "House"
+      "name": "House",
+      "code": "HO"
     },
     {
       "id": 3,
-      "name": "Room"
+      "name": "Room",
+      "code": "RO"
     }
   ],
   "rentalType": [
@@ -312,6 +315,86 @@
       "deposit": 1230,
       "totalPrice": "4500",
       "id": 3
+    },
+    {
+      "customerId": 4,
+      "facilityId": 3,
+      "contractCode": "HO-12345",
+      "startDay": "2023-06-30",
+      "endDay": "2023-07-01",
+      "deposit": 1234,
+      "totalPrice": "4561",
+      "id": 4
+    },
+    {
+      "customerId": 1,
+      "facilityId": 2,
+      "contractCode": "02195",
+      "startDay": "2023-06-24",
+      "endDay": "2023-07-01",
+      "deposit": 1234,
+      "totalPrice": "12344",
+      "id": 5
+    },
+    {
+      "customerId": 1,
+      "facilityId": 1,
+      "contractCode": "VI-02955",
+      "startDay": "2023-07-01",
+      "endDay": "2023-07-08",
+      "deposit": 12345,
+      "totalPrice": "123456",
+      "id": 6
+    },
+    {
+      "customerId": 4,
+      "facilityId": 2,
+      "contractCode": "HO-02172",
+      "startDay": "2023-07-01",
+      "endDay": "2023-07-08",
+      "deposit": 12345,
+      "totalPrice": "45612",
+      "id": 7
+    },
+    {
+      "customerId": 1,
+      "facilityId": 1,
+      "contractCode": "VI-07667",
+      "startDay": "2023-06-30",
+      "endDay": "2023-07-01",
+      "deposit": 123456,
+      "totalPrice": "123456",
+      "id": 8
+    },
+    {
+      "customerId": 1,
+      "facilityId": 1,
+      "contractCode": "RO-0262",
+      "startDay": "2023-06-30",
+      "endDay": "2023-07-01",
+      "deposit": 1324,
+      "totalPrice": "12354",
+      "id": 9
+    },
+    {
+      "customerId": 1,
+      "facilityId": 4,
+      "contractCode": "HO-05521",
+      "startDay": "2023-07-01",
+      "endDay": "2023-07-02",
+      "deposit": 123455,
+      "totalPrice": "645321",
+      "id": 10
+    },
+    {
+      "customerId": 4,
+      "facilityId": 11,
+      "contractCode": "HO-01639",
+      "startDay": "2023-06-30",
+      "endDay": "2023-07-01",
+      "deposit": 123455,
+      "totalPrice": "123456",
+      "id": 11
     }
   ]
 }

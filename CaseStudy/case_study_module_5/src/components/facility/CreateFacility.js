@@ -64,18 +64,34 @@ export function CreateFacility() {
                         .min(2, 'Min: 2')
                         .max(30, 'Max: 30'),
                     rentalTypeId: Yup.number().required('Không được để trống').min(1, 'Chưa chọn kiểu thuê'),
-                    roomStandardId: Yup.number()
-                        .required('Required').min(1, 'Chưa chọn loại phòng'),
+                    roomStandardId: Yup.number().test('required-if-typeFacility-is-3', 'Chưa chọn loại phòng', function(value) {
+                        if (typeFacility !== "3" ) {
+                            return Yup.number().required('Required').min(1 ).isValidSync(value);
+                        }
+                        return true;
+                    }),
+
                     otherUtilities: Yup.string(),
-                    quantityOfFloor: Yup.number()
-                        .required('Required')
-                        .min(0, 'Min: 0')
-                        .max(10, 'Max: 10'),
-                    areaOfPool: Yup.number()
-                        .required('Required')
-                        .min(0, 'Min: 0m2 = no pool')
-                        .max(1000, 'Mã: 1000m2'),
-                    image: Yup.string().required('Không được để trống')
+                    quantityOfFloor: Yup.number().test('required-if-typeFacility-is-3', 'Chưa nhập số tầng', function(value) {
+                        if (typeFacility !== "3" ) {
+                            return Yup.number().required('Required').min(1 ).max(10,'Số tầng phải nhỏ hơn 10').isValidSync(value);
+                        }
+                        return true;
+                    }),
+                        // .required('Required')
+                        // .min(1, 'Min: 0')
+                        // .max(10, 'Max: 10'),
+                    // areaOfPool: Yup.number()
+                    //     .required('Required')
+                    //     .min(0, 'Min: 0m2 = no pool')
+                    //     .max(1000, 'Mã: 1000m2'),
+                    image: Yup.string().required('Không được để trống'),
+                    areaOfPool: Yup.number().test('required-if-typeFacility-is-1', 'Diện tích hồ bơi phải lớn hơn 0', function(value) {
+                        if (typeFacility === "1" ) {
+                            return Yup.number().required('Not Blank').min(1,).isValidSync(value);
+                        }
+                        return true;
+                    }),
                 })}
                 onSubmit={(values, {setSubmitting, resetForm}) => {
                     setSubmitting(false)
@@ -238,55 +254,63 @@ export function CreateFacility() {
                                                         }
                                                     </Field>
                                                 </div>
-                                                <ErrorMessage name="roomStandardId" component='span'
-                                                              className="error-mess m-lg-3"/>
+
+
+
+                                                <div className="input-group input-group-sm mg">
+                                                    <div className="input-group-prepend">
+                                                        <span
+                                                            className="input-group-text">Mô tả các tiện ích khác</span>
+                                                    </div>
+                                                    <Field
+                                                        type="text"
+                                                        name="otherUtilities"
+                                                        className="form-control"
+                                                        aria-label="Small"
+                                                        aria-describedby="inputGroup-sizing-sm"
+                                                    />
+                                                </div>
+
+                                                <div className="input-group input-group-sm mg">
+                                                    <div className="input-group-prepend">
+                                                        <span className="input-group-text">Số tầng</span>
+                                                    </div>
+                                                    <Field
+                                                        type="number"
+                                                        name="quantityOfFloor"
+                                                        min={0}
+                                                        max={10}
+                                                        className="form-control"
+                                                        aria-label="Small"
+                                                        aria-describedby="inputGroup-sizing-sm"
+                                                    />
+                                                </div>
+
                                             </div>
                                     }
-
-
-                                    <div className="input-group input-group-sm mg">
-                                        <div className="input-group-prepend">
-                                            <span className="input-group-text">Mô tả các tiện ích khác</span>
-                                        </div>
-                                        <Field
-                                            type="text"
-                                            name="otherUtilities"
-                                            className="form-control"
-                                            aria-label="Small"
-                                            aria-describedby="inputGroup-sizing-sm"
-                                        />
-                                    </div>
-                                    <ErrorMessage name="otherUtilities" component='span' className="error-mess m-lg-3"/>
-                                    <div className="input-group input-group-sm mg">
-                                        <div className="input-group-prepend">
-                                            <span className="input-group-text">Số tầng</span>
-                                        </div>
-                                        <Field
-                                            type="number"
-                                            name="quantityOfFloor"
-                                            min={0}
-                                            max={10}
-                                            className="form-control"
-                                            aria-label="Small"
-                                            aria-describedby="inputGroup-sizing-sm"
-                                        />
-                                    </div>
+                                    <ErrorMessage name="roomStandardId" component='span'
+                                                  className="error-mess m-lg-3"/>
+                                    <ErrorMessage name="otherUtilities" component='span'
+                                                  className="error-mess m-lg-3"/>
                                     <ErrorMessage name="quantityOfFloor" component='span'
                                                   className="error-mess m-lg-3"/>
-                                    <div className="input-group input-group-sm mg">
-                                        <div className="input-group-prepend">
-                                            <span className="input-group-text">Diện tích hồ bơi</span>
-                                        </div>
-                                        <Field
-                                            type="number"
-                                            name="areaOfPool"
-                                            min={40}
-                                            max={1000}
-                                            className="form-control"
-                                            aria-label="Small"
-                                            aria-describedby="inputGroup-sizing-sm"
-                                        />
-                                    </div>
+                                    {
+                                        typeFacility === "1" ? <div className="input-group input-group-sm mg">
+                                            <div className="input-group-prepend">
+                                                <span className="input-group-text">Diện tích hồ bơi</span>
+                                            </div>
+                                            <Field
+                                                type="number"
+                                                name="areaOfPool"
+                                                min={40}
+                                                max={1000}
+                                                className="form-control"
+                                                aria-label="Small"
+                                                aria-describedby="inputGroup-sizing-sm"
+                                            />
+                                        </div> : ''
+                                    }
+
                                     <ErrorMessage name="areaOfPool" component='span' className="error-mess m-lg-3"/>
                                     <div className="input-group input-group-sm mg">
                                         <div className="input-group-prepend">
