@@ -119,6 +119,21 @@
       "freeServiceIncluded": "Vệ sinh định kỳ",
       "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg",
       "id": 14
+    },
+    {
+      "typeId": 1,
+      "name": "Villa hướng núi",
+      "useArea": 500,
+      "rentalCosts": 500000,
+      "maxNumberOfPeople": 12,
+      "rentalTypeId": 2,
+      "roomStandardId": 2,
+      "otherUtilities": "Đầy đủ tiện nghi",
+      "quantityOfFloor": 3,
+      "areaOfPool": 80,
+      "freeServiceIncluded": "Vệ sinh định kỳ",
+      "image": "132123",
+      "id": 15
     }
   ],
   "type": [

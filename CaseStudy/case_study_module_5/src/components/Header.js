@@ -121,17 +121,17 @@ export function Header() {
                                             ĐIỂM ĐẾN
                                         </a>
                                     </li>
-                                    <li
-                                        id="nav-menu-item-5013"
-                                        className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
-                                    >
-                                        <a
-                                            href="https://furamavietnam.com/vi/furama-special-offers/"
-                                            className="nav-link main-menu-link"
-                                        >
-                                            ADMIN
-                                        </a>
-                                    </li>
+                                    {/*<li*/}
+                                    {/*    id="nav-menu-item-5013"*/}
+                                    {/*    className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"*/}
+                                    {/*>*/}
+                                    {/*    <a*/}
+                                    {/*        href="https://furamavietnam.com/vi/furama-special-offers/"*/}
+                                    {/*        className="nav-link main-menu-link"*/}
+                                    {/*    >*/}
+                                    {/*        ADMIN*/}
+                                    {/*    </a>*/}
+                                    {/*</li>*/}
                                 </ul>
                             </div>
                         </nav>

@@ -19,13 +19,37 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b916bdbb-70b9-42ad-843c-8af019d37c92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../thithu/thu_thu/package.json" afterDir="false" />
+    <list default="true" id="7d37af34-e355-49ae-b92c-f65ee72e9f14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thu_thu/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thu_thu/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thu_thu/src/components/Create.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thu_thu/src/components/Edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thu_thu/src/components/ProductComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thu_thu/src/service/ProductService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/components/contract/CreateContract.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/components/contract/CreateContract.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/service/CustomerService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/service/CustomerService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/service/FacilityService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/service/FacilityService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7_API_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7_API_Client/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +66,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2RlqxlO1LcSzVbJ479NES1vbB9O" />
+  <component name="ProjectId" id="2S2kCwvZPWMMyz6XwXTS7nBN8hl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -54,7 +78,6 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -64,20 +87,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
   </component>
-  <component name="RunManager" selected="npm.json-server (1)">
-    <configuration name="json-server (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/bt2_quan_ly_sach/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="json-server" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="json-server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/bt1_todo_list/package.json" />
+      <package-json value="$PROJECT_DIR$/thu_thu/package.json" />
       <command value="run" />
       <scripts>
         <script value="json-server" />
@@ -88,7 +102,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.json-server (1)" />
         <item itemvalue="npm.json-server" />
       </list>
     </recent_temporary>
@@ -98,15 +111,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b916bdbb-70b9-42ad-843c-8af019d37c92" name="Default Changelist" comment="" />
-      <created>1687835263972</created>
+      <changelist id="7d37af34-e355-49ae-b92c-f65ee72e9f14" name="Default Changelist" comment="" />
+      <created>1688351939217</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1687835263972</updated>
-      <workItem from="1687835265113" duration="23439000" />
-      <workItem from="1687872725493" duration="4607000" />
-      <workItem from="1687921293334" duration="7982000" />
-      <workItem from="1687964069822" duration="5508000" />
+      <updated>1688351939217</updated>
+      <workItem from="1688351940395" duration="15264000" />
     </task>
     <servers />
   </component>
@@ -123,35 +133,30 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1687875612955">
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1688373613264">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1687875612955" />
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1687938238801">
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1688373613264" />
+    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1688373613264">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1687938238801" />
-    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1687938238801">
+    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1688373613264" />
+    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1688373613264">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1687938238801" />
-    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1687938238801">
+    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1688373613264" />
+    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1688373613264">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1687938238801" />
-    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1687938238801">
+    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1688373613264" />
+    <state x="-13" y="107" width="914" height="709" key="SettingsEditor" timestamp="1688371339006">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1687938238801" />
-    <state x="425" y="185" key="run.anything.popup" timestamp="1687857576865">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="425" y="185" key="run.anything.popup/0.0.1536.816@0.0.1536.816" timestamp="1687857576865" />
+    <state x="-13" y="107" width="914" height="709" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1688371339006" />
   </component>
 </project>

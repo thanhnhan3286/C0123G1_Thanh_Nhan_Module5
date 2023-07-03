@@ -65,7 +65,7 @@ export async function deleteFacility(id) {
 
 export const findAll = async () => {
     try {
-        const result = await axios.get('http://localhost:8080/facility')
+        const result = await axios.get('http://localhost:8080/facility?_sort=id&_order=desc')
         return result.data
     } catch (e) {
         console.log(e)

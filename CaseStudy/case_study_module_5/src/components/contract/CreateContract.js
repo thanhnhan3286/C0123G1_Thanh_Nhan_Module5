@@ -219,7 +219,7 @@ export function CreateContract() {
                                             className="form-control"
                                             aria-label="Small"
                                             aria-describedby="inputGroup-sizing-sm"
-                                            value={facility.find((e) => e.id == service)?.rentalCosts}
+                                            value={facility.find((f) => f.id == service)?.rentalCosts}
                                         />
                                     </div>
                                     <ErrorMessage name="totalPrice" component="span" className="error-mess m-lg-3"/>

@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "typeId": 2,
+      "name": "json-server",
+      "price": 234,
+      "image": "123456"
+    },
+    {
+      "name": "Nhan",
+      "typeId": 1,
+      "price": "23",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg",
+      "id": 3
+    },
+    {
+      "name": "Hieu ",
+      "typeId": 4,
+      "price": "23",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg",
+      "id": 4
+    },
+    {
+      "name": "Dinh",
+      "typeId": 3,
+      "price": "23",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg",
+      "id": 5
+    },
+    {
+      "name": "Nhan",
+      "typeId": 2,
+      "price": "20",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg",
+      "id": 6
+    }
+  ],
+  "type": [
+    {
+      "id": 1,
+      "name": "Gia dụng"
+    },
+    {
+      "id": 2,
+      "name": "Văn phòng"
+    },
+    {
+      "id": 3,
+      "name": "Thức ăn"
+    },
+    {
+      "id":4,
+      "name": "Điện lạnh"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

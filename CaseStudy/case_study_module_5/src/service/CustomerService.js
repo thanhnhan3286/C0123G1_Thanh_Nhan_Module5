@@ -65,7 +65,7 @@ export const deleteCustomer = async (id) => {
 
 export const findAll = async () => {
     try {
-        return (await axios.get('http://localhost:8080/customer')).data;
+        return (await axios.get('http://localhost:8080/customer?_sort=id&_order=desc')).data;
     } catch (e) {
         console.log(e)
     }
