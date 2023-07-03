@@ -16,11 +16,13 @@ export function EditFacility() {
     const [type, setType] = useState([]);
     const [rentalType, setRentalType] = useState([]);
     const [roomStandard, setRoomStandard] = useState([]);
+    const [typeFacility, setTypeFacility] = useState();
     useEffect(() => {
         const getFacility = async () => {
             const res = await facilityService.getFacilityApi(param.id);
             console.log(res)
             setFacility(res);
+            setTypeFacility(res.typeId);
         }
         getFacility()
     }, [param.id])
@@ -31,6 +33,7 @@ export function EditFacility() {
         setType(facilityType);
         const roomStandard = await facilityService.findAllRoomStandard()
         setRoomStandard(roomStandard);
+
     }
     useEffect(() => {
         fetchApi().then(r => null)
@@ -74,16 +77,26 @@ export function EditFacility() {
                         .max(30, 'Max: 30'),
                     rentalTypeId: Yup.number().required('Không được để trống').min(1, 'Chưa chọn kiểu thuê'),
                     roomStandardId: Yup.number()
-                        .required('Required').min(1, 'Chưa chọn loại phòng'),
+                        .test('required-if-typeFacility-is-3', 'Chưa chọn loại phòng', function (value) {
+                            if (typeFacility !== "3") {
+                                return Yup.number().required('Required').min(1).isValidSync(value);
+                            }
+                            return true;
+                        }),
                     otherUtilities: Yup.string(),
                     quantityOfFloor: Yup.number()
-                        .required('Required')
-                        .min(0, 'Min: 0')
-                        .max(10, 'Max: 10'),
-                    areaOfPool: Yup.number()
-                        .required('Required')
-                        .min(0, 'Min: 0m2 = no pool')
-                        .max(1000, 'Mã: 1000m2')
+                        .test('required-if-typeFacility-is-3', 'Chưa nhập số tầng', function (value) {
+                            if (typeFacility !== "3") {
+                                return Yup.number().required('Required').min(1).max(10, 'Số tầng phải nhỏ hơn 10').isValidSync(value);
+                            }
+                            return true;
+                        }),
+                    areaOfPool: Yup.number().test('required-if-typeFacility-is-1', 'Diện tích hồ bơi phải lớn hơn 0', function (value) {
+                        if (typeFacility === 1) {
+                            return Yup.number().required('Không được để trống').min(1,).isValidSync(value);
+                        }
+                        return true;
+                    })
                 })}
                 onSubmit={(values, {setSubmitting, resetForm}) => {
                     setSubmitting(false)
@@ -124,6 +137,7 @@ export function EditFacility() {
                                                 dịch vụ</label>
                                         </div>
                                         <Field
+                                            disabled
                                             as="select"
                                             name="typeId"
                                             className="form-control"
@@ -209,71 +223,81 @@ export function EditFacility() {
                                         </Field>
                                     </div>
                                     <ErrorMessage name="rentalTypeId" component='span' className="error-mess m-lg-3"/>
-                                    <div className="input-group input-group-sm mg">
-                                        <div className="input-group-prepend">
-                                            <span className="input-group-text">Tiêu chuẩn phòng</span>
-                                        </div>
-                                        <Field
-                                            as="select"
-                                            name="roomStandardId"
-                                            className="form-control"
-                                            aria-label="Small"
-                                            aria-describedby="inputGroup-sizing-sm"
-                                            required=""
-                                        >
-                                            <option>--Chọn tiêu chuẩn phòng--</option>
-                                            {
-                                                roomStandard.map((roomStandard) => (
-                                                    <option key={roomStandard.id}
-                                                            value={roomStandard.id}>{roomStandard.name}</option>
-                                                ))
-                                            }
-                                        </Field>
-                                    </div>
+
+                                    {
+                                        typeFacility === 3 ? "" :
+                                            <div>
+                                                <div className="input-group input-group-sm mg">
+                                                    <div className="input-group-prepend">
+                                                        <span className="input-group-text">Tiêu chuẩn phòng</span>
+                                                    </div>
+                                                    <Field
+                                                        as="select"
+                                                        name="roomStandardId"
+                                                        className="form-control"
+                                                        aria-label="Small"
+                                                        aria-describedby="inputGroup-sizing-sm"
+                                                        required=""
+                                                    >
+                                                        <option>--Chọn tiêu chuẩn phòng--</option>
+                                                        {
+                                                            roomStandard.map((roomStandard) => (
+                                                                <option key={roomStandard.id}
+                                                                        value={roomStandard.id}>{roomStandard.name}</option>
+                                                            ))
+                                                        }
+                                                    </Field>
+                                                </div>
+                                                <div className="input-group input-group-sm mg">
+                                                    <div className="input-group-prepend">
+                                                        <span
+                                                            className="input-group-text">Mô tả các tiện ích khác</span>
+                                                    </div>
+                                                    <Field
+                                                        type="text"
+                                                        name="otherUtilities"
+                                                        className="form-control"
+                                                        aria-label="Small"
+                                                        aria-describedby="inputGroup-sizing-sm"
+                                                    />
+                                                </div>
+                                                <div className="input-group input-group-sm mg">
+                                                    <div className="input-group-prepend">
+                                                        <span className="input-group-text">Số tầng</span>
+                                                    </div>
+                                                    <Field
+                                                        type="number"
+                                                        name="quantityOfFloor"
+                                                        min={0}
+                                                        max={10}
+                                                        className="form-control"
+                                                        aria-label="Small"
+                                                        aria-describedby="inputGroup-sizing-sm"
+                                                    />
+                                                </div>
+                                            </div>
+                                    }
                                     <ErrorMessage name="roomStandardId" component='span' className="error-mess m-lg-3"/>
-                                    <div className="input-group input-group-sm mg">
-                                        <div className="input-group-prepend">
-                                            <span className="input-group-text">Mô tả các tiện ích khác</span>
-                                        </div>
-                                        <Field
-                                            type="text"
-                                            name="otherUtilities"
-                                            className="form-control"
-                                            aria-label="Small"
-                                            aria-describedby="inputGroup-sizing-sm"
-                                        />
-                                    </div>
                                     <ErrorMessage name="otherUtilities" component='span' className="error-mess m-lg-3"/>
-                                    <div className="input-group input-group-sm mg">
-                                        <div className="input-group-prepend">
-                                            <span className="input-group-text">Số tầng</span>
-                                        </div>
-                                        <Field
-                                            type="number"
-                                            name="quantityOfFloor"
-                                            min={0}
-                                            max={10}
-                                            className="form-control"
-                                            aria-label="Small"
-                                            aria-describedby="inputGroup-sizing-sm"
-                                        />
-                                    </div>
                                     <ErrorMessage name="quantityOfFloor" component='span'
                                                   className="error-mess m-lg-3"/>
-                                    <div className="input-group input-group-sm mg">
-                                        <div className="input-group-prepend">
-                                            <span className="input-group-text">Diện tích hồ bơi</span>
-                                        </div>
-                                        <Field
-                                            type="number"
-                                            name="areaOfPool"
-                                            min={40}
-                                            max={1000}
-                                            className="form-control"
-                                            aria-label="Small"
-                                            aria-describedby="inputGroup-sizing-sm"
-                                        />
-                                    </div>
+                                    {
+                                        typeFacility === 1 ? <div className="input-group input-group-sm mg">
+                                            <div className="input-group-prepend">
+                                                <span className="input-group-text">Diện tích hồ bơi</span>
+                                            </div>
+                                            <Field
+                                                type="number"
+                                                name="areaOfPool"
+                                                // min={40}
+                                                max={1000}
+                                                className="form-control"
+                                                aria-label="Small"
+                                                aria-describedby="inputGroup-sizing-sm"
+                                            />
+                                        </div> : ""
+                                    }
+
                                     <ErrorMessage name="areaOfPool" component='span' className="error-mess m-lg-3"/>
                                     <div className="input-group input-group-sm mg">
                                         <div className="input-group-prepend">

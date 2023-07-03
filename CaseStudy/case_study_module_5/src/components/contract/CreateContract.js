@@ -15,12 +15,13 @@ export function CreateContract() {
     const [customer, setCustomer] = useState([]);
     const [facility, setFacility] = useState([]);
     // const [typeFacility, setTypeFacility] = useState();
+    const [service, setService] = useState();
     const [code, setCode] = useState('');
     const getListCustomerApi = async () => {
         const res = await customerService.findAll();
         setCustomer(res);
     };
-
+    // console.log(typeFacility);
     const getListFacilityTypesApi = async () => {
         const res = await facilityService.findAll();
         setFacility(res);
@@ -29,6 +30,15 @@ export function CreateContract() {
         const res = await contractService.createCode();
         console.log(res)
         setCode(res);
+    }
+    const getPrice = async (facilityId) => {
+        // const res = await facilityService.getFacilityApi();
+        // console.log(res);
+        // console.log(service);
+        console.log(facilityId);setService(facilityId);
+        console.log(facility.find((e) => e.id == service)?.rentalCosts);
+
+
     }
 
     useEffect(() => {
@@ -48,7 +58,7 @@ export function CreateContract() {
                 startDay: '',
                 endDay: '',
                 deposit: '',
-                totalPrice: ''
+                totalPrice: service,
             }}
                     validationSchema={yup.object({
                         customerId: yup.number().required('Không được để trống!!!').min(1, 'Chưa chọn khách hàng!!!'),
@@ -122,7 +132,7 @@ export function CreateContract() {
                                             <span className="input-group-text">Chọn dịch vụ</span>
                                         </div>
                                         <Field
-                                            // onClick={(event) => setTypeFacility(event.target.value)}
+                                            onClick={(event) => getPrice(event.target.value)}
                                             as="select"
                                             name="facilityId"
                                             className="form-control"
@@ -133,7 +143,9 @@ export function CreateContract() {
                                             {
                                                 facility.map((f, index) => (
                                                     <option key={index}
-                                                            value={f.id}>{f.id} - {f.name} - {f.useArea}m<sup>2</sup>
+                                                            value={f.id}>
+                                                            {f.id} - {f.name} - {f.useArea}m<sup>2</sup>
+
                                                     </option>
                                                 ))
                                             }
@@ -145,7 +157,7 @@ export function CreateContract() {
                                             <span className="input-group-text">Mã hợp đồng</span>
                                         </div>
                                         <Field
-                                            style={{textAlign:"center"}}
+                                            style={{textAlign: "center"}}
                                             disabled
                                             type="text"
                                             name="contractCode"
@@ -195,21 +207,22 @@ export function CreateContract() {
                                     </div>
                                     <ErrorMessage name="deposit" component="span"
                                                   className="error-mess m-lg-3 error-404"/>
-                                    <p style={{color: "red"}}/>
-                                    <div className="input-group input-group-sm mg">
+                                    <div className="input-group input-group-sm mg" >
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">Tổng số tiền thanh toán</span>
                                         </div>
                                         <Field
-                                            type="text"
+                                            style={{textAlign: "center"}}
+                                            disabled
+                                            type="number"
                                             name="totalPrice"
                                             className="form-control"
                                             aria-label="Small"
                                             aria-describedby="inputGroup-sizing-sm"
+                                            value={facility.find((e) => e.id == service)?.rentalCosts}
                                         />
                                     </div>
                                     <ErrorMessage name="totalPrice" component="span" className="error-mess m-lg-3"/>
-                                    <p style={{color: "red"}}/>
                                     <br/>
                                     <div className="mb-4 text-center">
                                         {

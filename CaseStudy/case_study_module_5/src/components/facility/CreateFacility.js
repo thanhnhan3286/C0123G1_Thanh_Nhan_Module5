@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./formCreateEdit.css"
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import * as Yup from "yup";
-import {toast, ToastContainer} from "react-toastify";
+import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import {ThreeDots} from "react-loader-spinner";
 import * as facilityService from "../../service/FacilityService";
@@ -70,7 +70,6 @@ export function CreateFacility() {
                         }
                         return true;
                     }),
-
                     otherUtilities: Yup.string(),
                     quantityOfFloor: Yup.number().test('required-if-typeFacility-is-3', 'Chưa nhập số tầng', function(value) {
                         if (typeFacility !== "3" ) {
@@ -254,9 +253,6 @@ export function CreateFacility() {
                                                         }
                                                     </Field>
                                                 </div>
-
-
-
                                                 <div className="input-group input-group-sm mg">
                                                     <div className="input-group-prepend">
                                                         <span
@@ -310,7 +306,6 @@ export function CreateFacility() {
                                             />
                                         </div> : ''
                                     }
-
                                     <ErrorMessage name="areaOfPool" component='span' className="error-mess m-lg-3"/>
                                     <div className="input-group input-group-sm mg">
                                         <div className="input-group-prepend">
