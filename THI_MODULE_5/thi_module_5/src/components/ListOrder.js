@@ -127,11 +127,11 @@ export function ListOrder() {
 
                                                         <td>
                                                             <a>
-                                                                <button type="button"
+                                                                <Link to={`/update/${list.id}`} type="button"
                                                                         className="btn btn-primary text-capitalize"
                                                                         data-bs-toggle="modal"
                                                                         fdprocessedid="q2sbyt">Sửa
-                                                                </button>
+                                                                </Link>
                                                             </a>
                                                         </td>
                                                         <td>

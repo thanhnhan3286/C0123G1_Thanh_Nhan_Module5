@@ -20,21 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d37af34-e355-49ae-b92c-f65ee72e9f14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/db.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/components/Create.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/components/Edit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/components/List.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/components/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/service/ProductService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/components/customer/ListCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/components/customer/ListCustomer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module 5/customer/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 5/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../THI_MODULE_5/thi_module_5/src/components/UpdateOrder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THI_MODULE_5/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../THI_MODULE_5/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THI_MODULE_5/thi_module_5/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../THI_MODULE_5/thi_module_5/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THI_MODULE_5/thi_module_5/src/components/ListOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/../THI_MODULE_5/thi_module_5/src/components/ListOrder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thi_thu_2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/thi_thu_2/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thi_thu_2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/thi_thu_2/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thi_thu_2/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/thi_thu_2/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thi_thu_2/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/thi_thu_2/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thu_thu/src/components/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/thu_thu/src/components/Create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thu_thu/src/components/ProductComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/thu_thu/src/components/ProductComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +107,7 @@
       <workItem from="1688351940395" duration="15264000" />
       <workItem from="1688378188305" duration="9819000" />
       <workItem from="1688443532595" duration="1283000" />
-      <workItem from="1688459012357" duration="2335000" />
+      <workItem from="1688459012357" duration="2932000" />
     </task>
     <servers />
   </component>
