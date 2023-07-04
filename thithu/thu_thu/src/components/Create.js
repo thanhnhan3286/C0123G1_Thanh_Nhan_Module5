@@ -17,7 +17,6 @@ export function Create() {
     }, [])
     return (
         <>
-
             <Formik
                 initialValues={{
                     name: '',

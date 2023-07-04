@@ -20,36 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d37af34-e355-49ae-b92c-f65ee72e9f14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thu_thu/db.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thu_thu/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thu_thu/src/components/Create.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thu_thu/src/components/Edit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thu_thu/src/components/ProductComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thu_thu/src/service/ProductService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/components/contract/CreateContract.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/components/contract/CreateContract.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/service/CustomerService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/service/CustomerService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/service/FacilityService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/service/FacilityService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss7_API_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7_API_Client/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/components/Create.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/components/Edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/components/List.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/components/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thi_thu_2/src/service/ProductService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/components/customer/ListCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/case_study_module_5/src/components/customer/ListCustomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module 5/customer/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 5/customer/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thi_thu_2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/thi_thu_2/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thi_thu_2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/thi_thu_2/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thi_thu_2/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/thi_thu_2/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thi_thu_2/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/thi_thu_2/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thu_thu/src/components/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/thu_thu/src/components/Create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thu_thu/src/components/ProductComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/thu_thu/src/components/ProductComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -76,6 +62,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -89,7 +76,17 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.json-server (1)">
+    <configuration name="json-server (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/thi_thu_2/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="json-server" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="json-server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/thu_thu/package.json" />
       <command value="run" />
@@ -102,6 +99,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.json-server (1)" />
         <item itemvalue="npm.json-server" />
       </list>
     </recent_temporary>
@@ -117,6 +115,9 @@
       <option name="presentableId" value="Default" />
       <updated>1688351939217</updated>
       <workItem from="1688351940395" duration="15264000" />
+      <workItem from="1688378188305" duration="9819000" />
+      <workItem from="1688443532595" duration="1283000" />
+      <workItem from="1688459012357" duration="2335000" />
     </task>
     <servers />
   </component>
@@ -133,27 +134,32 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1688373613264">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1688445085684">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1688373613264" />
-    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1688373613264">
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1688445085684" />
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1688434956770">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1688373613264" />
-    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1688373613264">
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1688434956770" />
+    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1688434956770">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1688373613264" />
-    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1688373613264">
+    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1688434956770" />
+    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1688434956769">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1688373613264" />
+    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1688434956769" />
+    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1688434956770">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1688434956770" />
     <state x="-13" y="107" width="914" height="709" key="SettingsEditor" timestamp="1688371339006">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

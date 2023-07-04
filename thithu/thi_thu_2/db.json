@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Bánh Bông lan",
+      "typeId": 1,
+      "price": 10000,
+      "image": "123456",
+      "createAT": "2023/02/02"
+    },
+    {
+      "id": 2,
+      "name": "Bánh Bông lan trứng muối",
+      "typeId": 1,
+      "price": 20000,
+      "image": "123456",
+      "createAT": "2023/02/02"
+    },
+    {
+      "id": 3,
+      "name": "Nước ép cam",
+      "typeId": 3,
+      "price": 15000,
+      "image": "123456",
+      "createAT": "2023/02/02"
+    }
+  ],
+  "type": [
+    {
+      "id": 1,
+      "name": "Bánh"
+    },
+    {
+      "id": 2,
+      "name": "Thức ăn nhanh"
+    },
+    {
+      "id": 3,
+      "name": "Nước ngọt"
+    },
+    {
+      "id": 4,
+      "name": "Sữa"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

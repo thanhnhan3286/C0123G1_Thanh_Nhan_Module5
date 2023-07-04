@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+        Default checkbox
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+    <label class="form-check-label" for="flexCheckChecked">
+        Checked checkbox
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+        Default radio
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+    <label class="form-check-label" for="flexRadioDefault2">
+        Default checked radio
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+    <label class="form-check-label" for="exampleRadios1">
+        Default radio
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+    <label class="form-check-label" for="exampleRadios2">
+        Second default radio
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+    <label class="form-check-label" for="exampleRadios3">
+        Disabled radio
+    </label>
+</div>
+<div
+        className="container boxed"
+        style={{marginTop: "2%", width: 600, height: "auto"}}
+>
+<h2 style={{textAlign: "center", marginTop: 20}}>Thêm mới khách hàng</h2>
+<div
+        id="form"
+        className="form"
+        style={{marginLeft: "10%", marginRight: "10%"}}
+>
+<Form action="#" method="POST" noValidate="novalidate">
+    <div className="input-group input-group-sm mg" style={{marginTop: 30}}>
+        <div className="input-group-prepend">
+            <span className="input-group-text">Họ tên</span>
+        </div>
+        <Field
+                type="text"
+                name="name"
+                className="form-control"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+        />
+    </div>
+    <ErrorMessage name="name" component="span" className="error-mess m-lg-3"/>
+
+    <div className="input-group input-group-sm mg">
+        <div className="input-group-prepend">
+            <span className="input-group-text">Ngày sinh</span>
+        </div>
+        <Field
+                type="date"
+                name="birthday"
+                className="form-control"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+        />
+    </div>
+    <ErrorMessage name="birthday" component="span" className="error-mess m-lg-3"/>
+
+    <div className="input-group input-group-sm mg">
+        <div className="input-group-prepend">
+            <span className="input-group-text">Giới tính</span>
+        </div>
+        <Field
+                as="select"
+                name="gender"
+                className="form-control"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+        >
+            <option value={0}>--Chọn giới tính--</option>
+            {
+            gender.map((g, index) => (
+            <option key={index} value={g.id}>{g.gender}</option>
+            )
+            )
+            }
+        </Field>
+    </div>
+    <ErrorMessage name="gender" component="span" className="error-mess m-lg-3"/>
+
+    <div className="input-group input-group-sm mg">
+        <div className="input-group-prepend">
+            <span className="input-group-text">Số CMND</span>
+        </div>
+        <Field
+                type="text"
+                name="cmnd"
+                className="form-control"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+        />
+    </div>
+    <ErrorMessage name="cmnd" component="span" className="error-mess m-lg-3"/>
+    <div className="input-group input-group-sm mg">
+        <div className="input-group-prepend">
+            <span className="input-group-text">Số điện thoại</span>
+        </div>
+        <Field
+                type="text"
+                name="phone"
+                className="form-control"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+        />
+    </div>
+    <ErrorMessage name="phone" component="span" className="error-mess m-lg-3"/>
+    <p style={{color: "red"}}/>
+    <div className="input-group input-group-sm mg">
+        <div className="input-group-prepend">
+            <span className="input-group-text">Email</span>
+        </div>
+        <Field
+                type="text"
+                name="email"
+                className="form-control"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+        />
+    </div>
+    <ErrorMessage name="email" component="span" className="error-mess m-lg-3"/>
+    <p style={{color: "red"}}/>
+    <div className="input-group input-group-sm mg">
+        <div className="input-group-prepend">
+            <span className="input-group-text">Loại khách</span>
+        </div>
+        <Field
+                as="select"
+                name="customerType"
+                className="form-control"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+        >
+            <option value={0}>--Chọn loại khách--</option>
+            {
+            customerTypes.map((ct, index) => (
+            <option key={index} value={ct.id}>{ct.name}</option>
+            )
+            )
+            }
+        </Field>
+    </div>
+    <ErrorMessage name="customerType" component="span" className="error-mess m-lg-3"/>
+    <div className="input-group input-group-sm mg">
+        <div className="input-group-prepend">
+            <span className="input-group-text">Địa chỉ</span>
+        </div>
+        <Field
+                type="text"
+                name="address"
+                className="form-control"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+        />
+    </div>
+    <ErrorMessage name="address" component="span" className="error-mess m-lg-3"/>
+    <p style={{color: "red"}}/>
+    <br/>
+    <div className="mb-4 text-center">
+        {
+        isSubmitting ? <ThreeDots visible={true}/> :
+        <button type="submit" className="btn btn-success">
+            Thêm mới
+        </button>
+        }
+    </div>
+</Form>
+</div>
+</div>
+</body>
+</html>

@@ -70,26 +70,15 @@ export function ListCustomer() {
                           style={{backgroundColor: "#046056"}}>Thêm mới</Link>
                 </div>
                 <div className="tab-content" id="orders-table-tab-content">
-                    <div
-                        className="tab-pane fade show active"
-                        id="orders-all"
-                        role="tabpanel"
-                        aria-labelledby="orders-all-tab"
-                    >
+                    <div className="tab-pane fade show active" id="orders-all"
+                        role="tabpanel" aria-labelledby="orders-all-tab">
                         <div className="app-card app-card-orders-table shadow-sm mb-5">
                             <div className="app-card-body">
                                 <div className="table-responsive">
                                     <table className="table app-table-hover mb-0 mt-5 text-left">
                                         <thead>
                                         <tr>
-                                            <th
-                                                style={{
-                                                    fontSize: 16,
-                                                    width: "8%",
-                                                    color: "black",
-                                                    textAlign: "center"
-                                                }}
-                                            >
+                                            <th style={{fontSize: 16, width: "8%", color: "black", textAlign: "center"}}>
                                                 ID
                                             </th>
                                             <th style={{fontSize: 16, width: "16%", color: "black"}}>

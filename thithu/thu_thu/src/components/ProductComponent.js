@@ -3,7 +3,6 @@ import * as productService from "../service/ProductService"
 import {Link} from "react-router-dom";
 import Swal from "sweetalert2";
 import {Field, Form, Formik} from "formik";
-import {deselectOptions} from "@testing-library/user-event/dist/select-options";
 
 
 export function ProductComponent() {
@@ -20,7 +19,7 @@ export function ProductComponent() {
     }
     const deletePro = async (id) => {
         await productService.deleteProduct(id);
-        getList();
+        await getList();
         await Swal.fire({
             title: 'Xóa thành công!!!',
             icon: "success",
@@ -64,7 +63,7 @@ export function ProductComponent() {
                         name: '',
                         typeId: ''
                     }}
-                    onSubmit={async (values,{resetForm}) => {
+                    onSubmit={ async (values, {resetForm}) => {
                         const search = async () => {
                             const res = await productService.search(values);
                             console.log(res)
@@ -77,8 +76,8 @@ export function ProductComponent() {
                     >
                         <Form className="text-center d-flex">
                             <Field type="text" name="name" className="form-control me-2" placeholder="Name product"
-                            aria-label="Search" style={{width:"300px"}}/>
-                            <Field as="select" name="typeId" className="form-control">
+                                   aria-label="Search" style={{width: "300px"}}/>
+                            <Field as="select" name="typeId" className="form-control me-2">
                                 <option value="">--Choose Type Product--</option>
                                 {
                                     type.map((t) => (
@@ -87,8 +86,10 @@ export function ProductComponent() {
                                     )
                                 }
                             </Field>
-                            <button type="submit" className="btn btn-outline-secondary">Search</button>
-                            <button onClick={()=> getList()} type="reset" className="btn btn-outline-secondary">Reset</button>
+                            <button type="submit" className="btn btn-outline-secondary me-2">Search</button>
+                            <button onClick={() => getList()} type="reset"
+                                    className="btn btn-outline-secondary me-2">Reset
+                            </button>
                         </Form>
                     </div>
                 </Formik>
@@ -118,7 +119,7 @@ export function ProductComponent() {
                                 <td>
 
                                     <Link className="btn btn-outline-warning" to={`/update/${list.id}`}
-                                          >Update</Link>
+                                    >Update</Link>
 
 
                                 </td>
