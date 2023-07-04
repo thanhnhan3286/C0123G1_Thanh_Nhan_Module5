@@ -1,0 +1,136 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "buyDay": "2020/03/21",
+      "totalPrice": 1000,
+      "quantity": 1,
+      "productId": 1,
+      "price": 500
+    },
+    {
+      "id": 2,
+      "buyDay": "2020/03/21",
+      "totalPrice": 1000,
+      "quantity": 1,
+      "productId": 2,
+      "price": 500
+    },
+    {
+      "id": 3,
+      "buyDay": "2020/03/21",
+      "totalPrice": 1000,
+      "quantity": 1,
+      "productId": 3,
+      "price": 500
+    },
+    {
+      "id": 4,
+      "buyDay": "2020/03/21",
+      "totalPrice": 1000,
+      "quantity": 1,
+      "productId": 5,
+      "price": 500
+    },
+    {
+      "buyDay": "2023-07-04",
+      "totalPrice": 0,
+      "quantity": 222,
+      "productId": 2,
+      "id": 5,
+      "price": 500
+    },
+    {
+      "buyDay": "2023-07-04",
+      "quantity": 12,
+      "productId": 5,
+      "id": 6,
+      "price": 500
+    },
+    {
+      "buyDay": "2023-07-03",
+      "totalPrice": null,
+      "quantity": 3,
+      "productId": 2,
+      "id": 7,
+      "price": 500
+    },
+    {
+      "buyDay": "2023-07-04",
+      "totalPrice": null,
+      "quantity": 2,
+      "productId": 2,
+      "id": 8,
+      "price": 500
+    },
+    {
+      "buyDay": "2023-07-04",
+      "totalPrice": 2400,
+      "quantity": 2,
+      "productId": 2,
+      "id": 9
+    },
+    {
+      "buyDay": "2023-07-04",
+      "totalPrice": 1200,
+      "quantity": 3,
+      "productId": 3,
+      "id": 10
+    },
+    {
+      "buyDay": "2023-07-03",
+      "totalPrice": 3600,
+      "quantity": 3,
+      "productId": 2,
+      "id": 11
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone X",
+      "price": 1000,
+      "type": 1
+    },
+    {
+      "id": 2,
+      "name": "Samsung Note 10",
+      "price": 1200,
+      "type": 1
+    },
+    {
+      "id": 3,
+      "name": "Dell Vostrol 5302",
+      "price": 400,
+      "type": 2
+    },
+    {
+      "id": 4,
+      "name": "Acer 5302",
+      "price": 600,
+      "type": 2
+    },
+    {
+      "id": 5,
+      "name": "Iphone 8 plus 128GB",
+      "price": 500,
+      "type": 1
+    },
+    {
+      "id": 6,
+      "name": "Oppo F10",
+      "price": 350,
+      "type": 1
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "name": "Điện thoại"
+    },
+    {
+      "id": 2,
+      "name": "Laptop"
+    }
+  ]
+}
